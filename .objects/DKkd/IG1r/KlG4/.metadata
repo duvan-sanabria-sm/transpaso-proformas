@@ -1,0 +1,13 @@
+﻿{
+  "Name": "CircularizacionCartera - UiPath Studio Commun",
+  "Type": "Screen",
+  "Id": "KlG4M7WNJEaLjmZjtJr3PA",
+  "Reference": "A91PH9c_eEG4ABR2aEWY9w/KlG4M7WNJEaLjmZjtJr3PA",
+  "ParentRef": "A91PH9c_eEG4ABR2aEWY9w/IG1rllK1r0-upa6XQqIs0Q",
+  "Created": "2024-07-08T15:25:22.452435Z",
+  "Updated": "2024-07-08T15:25:22.452435Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Sequence_32",
+        "variable1&Sequence_31",
+        "ruta_local_descargas&Sequence_20",
+        "ruta_revision_proformas&Flowchart_1",
+        "rutas_archivos_agenda&Sequence_21",
+        "archivo_proformas&Sequence_5",
+        "user&Sequence_14",
+        "password&Sequence_14",
+        "conexion&Sequence_3",
+        "variable1&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
