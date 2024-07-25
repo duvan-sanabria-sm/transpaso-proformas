@@ -51,6 +51,14 @@
       <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Excel.Activities.Windows.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -125,9 +133,12 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Diagrama de flujo" sap:VirtualizedContainerService.HintSize="1104,592" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Diagrama de flujo" sap:VirtualizedContainerService.HintSize="1121,592" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\" Name="ruta_revision_proformas" />
       <Variable x:TypeArguments="sd:DataTable" Name="datos_filtrados_proformas" />
@@ -141,7 +152,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -192,7 +203,7 @@
         </ui:ForEachRow>
       </Sequence>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID2">
+    <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">235,135</av:Point>
@@ -605,173 +616,396 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">475,135</av:Point>
               <av:Size x:Key="ShapeSize">110,70</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">530,205 530,235 520,235 520,335</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">530,205 530,325</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Filtrado de nuevas proformas" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_65">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance proceso de Excel" sap:VirtualizedContainerService.HintSize="636,1172" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
-              <ueab:ExcelProcessScopeX.Body>
-                <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1062" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <ui:CommentOut sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                <Sequence DisplayName="Filtrado de nuevas proformas" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance proceso de Excel" sap:VirtualizedContainerService.HintSize="636,1172" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                    <ueab:ExcelProcessScopeX.Body>
+                      <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1062" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar el archivo Excel" sap:VirtualizedContainerService.HintSize="540,974" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="C:\Users\duvan.sanabria\Downloads\ExcelFilters\Suppliers.xlsx" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
+                            <ueab:ExcelApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="filtro_actualizacion" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="506,682" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:FilterX ColumnName="{x:Null}" ClearFilter="True" DisplayName="Filtrado: Limpiar los filtros del documento Excel" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;)]">
+                                    <ueab:FilterX.FilterArgument>
+                                      <ueabf:FilterArgument Mode="Basic">
+                                        <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                          <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                            <ueabf:AdvancedFilterArgument.Condition1>
+                                              <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                            </ueabf:AdvancedFilterArgument.Condition1>
+                                            <ueabf:AdvancedFilterArgument.Condition2>
+                                              <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                            </ueabf:AdvancedFilterArgument.Condition2>
+                                          </ueabf:AdvancedFilterArgument>
+                                        </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                        <ueabf:FilterArgument.BasicFiltersArgument>
+                                          <ueabf:BasicFilterArgument>
+                                            <ueabf:BasicFilterArgument.BasicFilters>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                <InArgument x:TypeArguments="x:String">#N/D</InArgument>
+                                              </scg:List>
+                                            </ueabf:BasicFilterArgument.BasicFilters>
+                                          </ueabf:BasicFilterArgument>
+                                        </ueabf:FilterArgument.BasicFiltersArgument>
+                                      </ueabf:FilterArgument>
+                                    </ueab:FilterX.FilterArgument>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:FilterX>
+                                  <ueab:FilterX ClearFilter="False" ColumnName="Nuevas Proformas" DisplayName="Filtrar columnas nuevas proformas" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[filtro_actualizacion]">
+                                    <ueab:FilterX.FilterArgument>
+                                      <ueabf:FilterArgument Mode="Basic">
+                                        <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                          <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                            <ueabf:AdvancedFilterArgument.Condition1>
+                                              <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                            </ueabf:AdvancedFilterArgument.Condition1>
+                                            <ueabf:AdvancedFilterArgument.Condition2>
+                                              <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                            </ueabf:AdvancedFilterArgument.Condition2>
+                                          </ueabf:AdvancedFilterArgument>
+                                        </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                        <ueabf:FilterArgument.BasicFiltersArgument>
+                                          <ueabf:BasicFilterArgument>
+                                            <ueabf:BasicFilterArgument.BasicFilters>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                <InArgument x:TypeArguments="x:String">#N/D</InArgument>
+                                              </scg:List>
+                                            </ueabf:BasicFilterArgument.BasicFilters>
+                                          </ueabf:BasicFilterArgument>
+                                        </ueabf:FilterArgument.BasicFiltersArgument>
+                                      </ueabf:FilterArgument>
+                                    </ueab:FilterX.FilterArgument>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:FilterX>
+                                  <ueab:ReadRangeX DisplayName="Lectura: Capturamos los datos, se almacenan en la tabla de datos" sap:VirtualizedContainerService.HintSize="444,192" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;).Range(&quot;A:H&quot;)]" SaveTo="[datos_filtrados_proformas]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelApplicationCard.Body>
+                          </ueab:ExcelApplicationCard>
+                        </Sequence>
+                      </ActivityAction>
+                    </ueab:ExcelProcessScopeX.Body>
+                  </ueab:ExcelProcessScopeX>
+                </Sequence>
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">475,325</av:Point>
+                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">585,360 715,360</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="766,1409" sap2010:WorkflowViewState.IdRef="Sequence_76">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar el archivo Excel" sap:VirtualizedContainerService.HintSize="540,974" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="C:\Users\duvan.sanabria\Downloads\ExcelFilters\Suppliers.xlsx" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
-                      <ueab:ExcelApplicationCard.Body>
-                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <Sequence DisplayName="Actualización de plantilla Proformas" sap:VirtualizedContainerService.HintSize="704,1321" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance del Excel" sap:VirtualizedContainerService.HintSize="642,1210" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_8">
+                        <ueab:ExcelProcessScopeX.Body>
+                          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="608,1100" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar archivo Excel" sap:VirtualizedContainerService.HintSize="546,1012" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" KeepExcelFileOpen="True" ResizeWindow="None" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Plantilla Proformas NS.xlsx">
+                                <ueab:ExcelApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="plantilla_proformas" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="512,720" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="sd:DataTable" Name="numero_filas_excel" />
+                                        <Variable x:TypeArguments="x:Int32" Name="last_row" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ueab:ReadRangeX DisplayName="Lectura: el total de número de registros" HasHeaders="False" sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[plantilla_proformas.Sheet(&quot;Regionales&quot;)]" ReadFormatting="Default" SaveTo="[numero_filas_excel]" />
+                                      <Assign DisplayName="Asignación: Pasar el total de registros a una variable" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[last_row]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[numero_filas_excel.RowCount+1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ueab:WriteRangeX Destination="[plantilla_proformas.Sheet.Item(&quot;Regionales&quot;).Range.Item(&quot;A&quot; + last_row.ToString)]" DisplayName="Pegar: translado de la tabla de datos al Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="True" Source="[datos_filtrados_proformas]" />
+                                      <Sequence DisplayName="Filtrado por Estado NS y Porcentaje" sap:VirtualizedContainerService.HintSize="450,126" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ueab:ExcelApplicationCard.Body>
+                              </ueab:ExcelApplicationCard>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelProcessScopeX.Body>
+                      </ueab:ExcelProcessScopeX>
+                    </Sequence>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">715,325</av:Point>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Filtrado por Estado NS y Porcentaje" sap:VirtualizedContainerService.HintSize="846,3363" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="numero_filas_visitas_ejecutadas" />
+                      <Variable x:TypeArguments="x:Int32" Name="last_row_visitas" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="datos_transpaso_proformas" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance proceso de Excel" sap:VirtualizedContainerService.HintSize="784,3275" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_10">
+                      <ueab:ExcelProcessScopeX.Body>
+                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="filtro_actualizacion" />
+                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="506,682" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="750,3165" sap2010:WorkflowViewState.IdRef="Sequence_71">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:FilterX ColumnName="{x:Null}" ClearFilter="True" DisplayName="Filtrado: Limpiar los filtros del documento Excel" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;)]">
-                              <ueab:FilterX.FilterArgument>
-                                <ueabf:FilterArgument Mode="Basic">
-                                  <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                    <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                      <ueabf:AdvancedFilterArgument.Condition1>
-                                        <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                      </ueabf:AdvancedFilterArgument.Condition1>
-                                      <ueabf:AdvancedFilterArgument.Condition2>
-                                        <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                      </ueabf:AdvancedFilterArgument.Condition2>
-                                    </ueabf:AdvancedFilterArgument>
-                                  </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                  <ueabf:FilterArgument.BasicFiltersArgument>
-                                    <ueabf:BasicFilterArgument>
-                                      <ueabf:BasicFilterArgument.BasicFilters>
-                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                          <InArgument x:TypeArguments="x:String">#N/D</InArgument>
-                                        </scg:List>
-                                      </ueabf:BasicFilterArgument.BasicFilters>
-                                    </ueabf:BasicFilterArgument>
-                                  </ueabf:FilterArgument.BasicFiltersArgument>
-                                </ueabf:FilterArgument>
-                              </ueab:FilterX.FilterArgument>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ueab:FilterX>
-                            <ueab:FilterX ClearFilter="False" ColumnName="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;).Cell(&quot;I1&quot;)]" DisplayName="Filtrar columnas nuevas proformas" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;)]">
-                              <ueab:FilterX.FilterArgument>
-                                <ueabf:FilterArgument Mode="Basic">
-                                  <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                    <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                      <ueabf:AdvancedFilterArgument.Condition1>
-                                        <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                      </ueabf:AdvancedFilterArgument.Condition1>
-                                      <ueabf:AdvancedFilterArgument.Condition2>
-                                        <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                      </ueabf:AdvancedFilterArgument.Condition2>
-                                    </ueabf:AdvancedFilterArgument>
-                                  </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                  <ueabf:FilterArgument.BasicFiltersArgument>
-                                    <ueabf:BasicFilterArgument>
-                                      <ueabf:BasicFilterArgument.BasicFilters>
-                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                          <InArgument x:TypeArguments="x:String">#N/D</InArgument>
-                                        </scg:List>
-                                      </ueabf:BasicFilterArgument.BasicFilters>
-                                    </ueabf:BasicFilterArgument>
-                                  </ueabf:FilterArgument.BasicFiltersArgument>
-                                </ueabf:FilterArgument>
-                              </ueab:FilterX.FilterArgument>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ueab:FilterX>
-                            <ueab:ReadRangeX DisplayName="Lectura: Capturamos los datos, se almacenan en la tabla de datos" sap:VirtualizedContainerService.HintSize="444,192" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[filtro_actualizacion.Sheet(&quot;Añadir Nuevas Proformas&quot;).Range(&quot;A:H&quot;)]" SaveTo="[datos_filtrados_proformas]" />
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar el archivo Excel" sap:VirtualizedContainerService.HintSize="688,3077" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="C:\Users\duvan.sanabria\Downloads\ExcelFilters\Suppliers.xlsx" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="filtro_actualizacion" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="654,2785" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:FilterX ColumnName="{x:Null}" FilterArgument="{x:Null}" ClearFilter="True" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="592,201" sap2010:WorkflowViewState.IdRef="FilterX_6" Range="[filtro_actualizacion.Sheet(&quot;Visitas Ejecutadas&quot;)]" />
+                                    <ueab:ReadRangeX DisplayName="Read Range" HasHeaders="False" sap:VirtualizedContainerService.HintSize="592,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[filtro_actualizacion.Sheet(&quot;Visitas Ejecutadas&quot;)]" SaveTo="[numero_filas_visitas_ejecutadas]" />
+                                    <Assign DisplayName="Asignación: Pasar el total de registros a una variable" sap:VirtualizedContainerService.HintSize="592,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[last_row_visitas]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[numero_filas_visitas_ejecutadas.RowCount]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="592,122" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[last_row_visitas.ToString]" />
+                                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="592,1011" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: En la columna Estado NS" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_9" InScope="[filtro_actualizacion]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="filtro_actualizacion" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable CVScreenId="1d4adf21-2556-4aca-acac-6e9ba77b636e" CvElementArea="845, 355, 19, 19" CvType="ArrowButton" DesignTimeRectangle="846, 356, 17, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Cuadrícula' /&gt;&lt;uia automationid='H8' cls='XLSpreadsheetCell' name='H8' tableCol='8' tableRow='5' /&gt;&lt;uia automationid='Dropdown' name='No se aplicó ningún filtro' role='elemento de menú' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Cuadrícula' /&gt;&lt;uia automationid='H8' cls='XLSpreadsheetCell' name='H8' /&gt;&lt;uia automationid='Dropdown' name='No se aplicó ningún filtro' role='elemento de menú' check:fulltext='No se aplicó ningún filtro' /&gt;" Guid="5b88e5d5-734f-4351-88e8-3d093f34a586" InformativeScreenshot="0248cc9d305e32a2eec05c453e24358c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Filtros Actualización de Proformas - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target CVScreenId="1d4adf21-2556-4aca-acac-6e9ba77b636e" CvElementArea="845, 355, 19, 19" CvTextArea="688, 356, 76, 14" CvTextArgument="Estado NS" CvType="ArrowButton" DesignTimeRectangle="685, 354, 179, 21" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Cuadrícula' /&gt;&lt;uia automationid='H8' cls='XLSpreadsheetCell' name='H8' tableCol='8' tableRow='5' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Cuadrícula' /&gt;&lt;uia automationid='H8' cls='XLSpreadsheetCell' name='H8' role='elemento' check:text='Estado NS' /&gt;" Guid="59efb4b0-f1a0-4228-889a-6f79e8d6175f" SearchSteps="Selector, FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Quitar lo que este filtrado" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_10" InScope="[filtro_actualizacion]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="filtro_actualizacion" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="661, 681, 100, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='(Seleccionar todo)' role='casilla' /&gt;" FuzzySelectorArgument="&lt;uia name='(Seleccionar todo)' role='casilla' automationid='' check:fulltext='(Seleccionar todo)' /&gt;" Guid="d45944aa-1f74-4c9d-9a7d-d788b0417b75" InformativeScreenshot="859b459fff8f7d4d60d26b0c7c86cbe9.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Filtros Actualización de Proformas - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target CVScreenId="a5e563b7-bfab-44ef-85e9-711408404112" CvTextArea="687, 651, 155, 14" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="627, 656, 206, 18" FullSelectorArgument="&lt;uia cls='NetUITextbox' name='Escriba el nombre del campo para buscar' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUITextbox' name='Escriba el nombre del campo para buscar' role='Cuadro de edición' automationid='' check:text='Buscar' /&gt;" Guid="79fd0063-50ea-4523-b224-9a5f48448f23" SearchSteps="Selector, FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Filtrar por proyecto de ejecución" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_11" InScope="[filtro_actualizacion]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="filtro_actualizacion" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable CVScreenId="c49bd330-69d9-4759-934d-cc78feaee960" CvTextArea="687, 735, 155, 13" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="661, 735, 145, 18" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='PROYECTO EN EJECUCIÓN' role='casilla' /&gt;" FuzzySelectorArgument="&lt;uia name='PROYECTO EN EJECUCIÓN' role='casilla' automationid='' check:fulltext='PROYECTO EN EJECUCIÓN' /&gt;" Guid="f749858d-f7e6-41f9-9150-55303554da44" InformativeScreenshot="56d22fd01bc8eca16fa2fab7c2286115.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Filtros Actualización de Proformas - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="661, 681, 100, 18" FullSelectorArgument="&lt;uia name='(Seleccionar todo)' role='casilla' /&gt;" FuzzySelectorArgument="&lt;uia name='(Seleccionar todo)' role='casilla' automationid='' check:fulltext='(Seleccionar todo)' /&gt;" Guid="fc3e1da2-c154-421c-8e80-592959913a3c" SearchSteps="Selector, FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Finalizar filtrado" sap:VirtualizedContainerService.HintSize="388,216" sap2010:WorkflowViewState.IdRef="NClick_12" InScope="[filtro_actualizacion]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="filtro_actualizacion" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable CVScreenId="fa917b36-08e2-4d9c-b913-aebd19359c66" CvTextArea="755, 860, 38, 17" CvTextArgument="#N/D" CvType="Text" DesignTimeRectangle="716, 860, 67, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='NetUIButton' name='ACEPTAR' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIButton' name='ACEPTAR' role='Botón' automationid='' check:fulltext='ACEPTAR' /&gt;" Guid="28ac39da-c267-4581-aebb-22885e66f0b5" InformativeScreenshot="e76a192e2883eb1e3f042e4695d41182.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Filtros Actualización de Proformas - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target CVScreenId="fa917b36-08e2-4d9c-b913-aebd19359c66" CvTextArea="687, 735, 155, 13" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="661, 735, 145, 18" FullSelectorArgument="&lt;uia name='PROYECTO EN EJECUCIÓN' role='casilla' /&gt;" FuzzySelectorArgument="&lt;uia name='PROYECTO EN EJECUCIÓN' role='casilla' automationid='' check:fulltext='PROYECTO EN EJECUCIÓN' /&gt;" Guid="83d43709-efc1-40ff-83f3-aaa7bba71b03" SearchSteps="Selector, FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                    </Sequence>
+                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="592,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_6" Range="[filtro_actualizacion.Sheet.Item(&quot;Visitas Ejecutadas&quot;).Range(&quot;A8:H&quot; + last_row_visitas.ToString)]" SaveTo="[datos_transpaso_proformas]" />
+                                    <Sequence DisplayName="Traspaso de Proforma" sap:VirtualizedContainerService.HintSize="592,847" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="variable1" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:OutputDataTable DataTable="[datos_transpaso_proformas]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="530,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[variable1]" />
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[variable1]" />
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datos_transpaso_proformas]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,502" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                        <ui:ForEachRow.Body>
+                                          <ActivityAction x:TypeArguments="sd:DataRow">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="value_OS_NS" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[value_OS_NS]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">[CurrentRow("Porcentaje").ToString]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[value_OS_NS]" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEachRow.Body>
+                                      </ui:ForEachRow>
+                                    </Sequence>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                            </ueab:ExcelApplicationCard>
                           </Sequence>
                         </ActivityAction>
-                      </ueab:ExcelApplicationCard.Body>
-                    </ueab:ExcelApplicationCard>
+                      </ueab:ExcelProcessScopeX.Body>
+                    </ueab:ExcelProcessScopeX>
                   </Sequence>
-                </ActivityAction>
-              </ueab:ExcelProcessScopeX.Body>
-            </ueab:ExcelProcessScopeX>
-          </Sequence>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID1">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">465,335</av:Point>
-                  <av:Size x:Key="ShapeSize">110,70</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Actualización de plantilla Proformas" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_62">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance del Excel" sap:VirtualizedContainerService.HintSize="636,1075" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_8">
-                  <ueab:ExcelProcessScopeX.Body>
-                    <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="602,965" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar archivo Excel" sap:VirtualizedContainerService.HintSize="540,877" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" KeepExcelFileOpen="True" ResizeWindow="None" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Plantilla Proformas NS.xlsx">
-                          <ueab:ExcelApplicationCard.Body>
-                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="plantilla_proformas" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="506,585" sap2010:WorkflowViewState.IdRef="Sequence_49">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="sd:DataTable" Name="numero_filas_excel" />
-                                  <Variable x:TypeArguments="x:Int32" Name="last_row" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ueab:ReadRangeX DisplayName="Lectura: el total de número de registros" HasHeaders="False" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[plantilla_proformas.Sheet(&quot;Regionales&quot;)]" ReadFormatting="Default" SaveTo="[numero_filas_excel]" />
-                                <Assign DisplayName="Asignación: Pasar el total de registros a una variable" sap:VirtualizedContainerService.HintSize="444,114" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Int32">[last_row]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Int32">[numero_filas_excel.RowCount+1]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <ueab:WriteRangeX Destination="[plantilla_proformas.Sheet.Item(&quot;Regionales&quot;).Range.Item(&quot;A&quot; + last_row.ToString)]" DisplayName="Pegar: translado de la tabla de datos al Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="444,182" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="True" Source="[datos_filtrados_proformas]" />
-                              </Sequence>
-                            </ActivityAction>
-                          </ueab:ExcelApplicationCard.Body>
-                        </ueab:ExcelApplicationCard>
-                      </Sequence>
-                    </ActivityAction>
-                  </ueab:ExcelProcessScopeX.Body>
-                </ueab:ExcelProcessScopeX>
-              </Sequence>
+                </FlowStep>
+              </FlowStep.Next>
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
@@ -781,7 +1015,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">645,335</av:Point>
+          <av:Point x:Key="ShapeLocation">705,155</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -791,42 +1025,45 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
+        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance del Excel" sap:VirtualizedContainerService.HintSize="626,760" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_9">
+          <ueab:ExcelProcessScopeX.Body>
+            <ActivityAction x:TypeArguments="ui:IExcelProcess">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="592,650" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Uso del documento Excel" sap:VirtualizedContainerService.HintSize="530,562" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
+                  <ueab:ExcelApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Añadir Nuevas Proformas&quot;).Cell(&quot;A275&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[Excel.Sheet(&quot;Visitas Ejecutadas&quot;).Cell(&quot;F5&quot;)]" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ueab:ExcelApplicationCard.Body>
+                </ueab:ExcelApplicationCard>
+              </Sequence>
+            </ActivityAction>
+          </ueab:ExcelProcessScopeX.Body>
+        </ueab:ExcelProcessScopeX>
       </Sequence>
     </FlowStep>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">925,165</av:Point>
-          <av:Size x:Key="ShapeSize">110,70</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Filtrado por Estado NS y Porcentaje" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_9">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Sequence>
-    </FlowStep>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">955,285</av:Point>
-          <av:Size x:Key="ShapeSize">110,70</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Traspaso de Proforma" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_10">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Sequence>
-    </FlowStep>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">975,445</av:Point>
+          <av:Point x:Key="ShapeLocation">925,325</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -839,5 +1076,6 @@
       </Sequence>
     </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
   </Flowchart>
 </Activity>
