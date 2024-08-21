@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Resultados KS REPORTE CARTERA (ROBOT) ",
+  "Type": "Screen",
+  "Id": "--x6PddAeE6k5DlibiVVkA",
+  "Reference": "A91PH9c_eEG4ABR2aEWY9w/--x6PddAeE6k5DlibiVVkA",
+  "ParentRef": "A91PH9c_eEG4ABR2aEWY9w/IG1rllK1r0-upa6XQqIs0Q",
+  "Created": "2024-08-21T13:29:05.6646529Z",
+  "Updated": "2024-08-21T13:29:05.6646529Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

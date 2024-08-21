@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VPqUmMEzM0CI184sAwmGRA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://5845631.app.netsuite.com/app/common/search/searchresults.nl?searchid=2010&amp;whence=" CVScreenId="b75c4800-e4a4-418e-a25f-42e0251bf56e" CvElementArea="298, 201, 147, 37" CvType="InputBox" DesignTimeRectangle="301, 208, 114, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='uif750' placeholder='Buscar' aaname='' /&gt;" Guid="7fd1d060-44b2-4c78-9409-c2ac8e31fe68" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession20Id' title='Resultados KS REPORTE CARTERA (ROBOT): - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="b75c4800-e4a4-418e-a25f-42e0251bf56e" CvTextArea="144, 211, 139, 16" CvTextArgument="SM SSERVIMETERS" CvType="Text" DesignTimeRectangle="144, 213, 140, 14" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='uif37' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uif37' tag='IMG' type='' class='uif733 uif736 uif622' aaname='logo' /&gt;" Guid="05efdb3a-38f8-4cfb-a19d-53e5386cd618" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e2cd460ba5898f0ef3f2dcd670ce2b17.png" xmlns="">0RWBZuyQockCSSyheRZsAlw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

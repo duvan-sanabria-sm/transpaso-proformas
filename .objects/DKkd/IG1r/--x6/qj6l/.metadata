@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Buscador El número de la orden de servicio ",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "qj6lZu1Z7E2PMMSE0uxpVQ",
+  "Reference": "A91PH9c_eEG4ABR2aEWY9w/qj6lZu1Z7E2PMMSE0uxpVQ",
+  "ParentRef": "A91PH9c_eEG4ABR2aEWY9w/--x6PddAeE6k5DlibiVVkA",
+  "Created": "2024-08-21T13:29:06.2387938Z",
+  "Updated": "2024-08-21T13:29:06.2387938Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

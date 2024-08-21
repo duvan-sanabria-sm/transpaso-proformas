@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="qS_j26EMg0-itgtkvpVO5g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" FilePath="MSTeams_8wekyb3d8bbwe!MSTeams" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVFhH7ZY9SgRBEIXnCHMEj7AXENxAUEQY0EQwEDHRXFxQdMBwb2BgZmDkBRYm0cBANjZxExHEYI/Q1ltqesua1u75C4R+8MHMVE+91z/LThL1b3V+/ZURM8IwuM643K9gJIw1/YcgEzlzzYyHJdnec0oUhGFwnXK5mcggVYYVeCgCSHMbgsvNRAZ1AmjzkhUe0kxkEroFLnMb8Ie2diZTwtRhd//JFcAeQjIL3wKXQQib2+PSuPIzJLPwQyibji5fzN3926+gXo7l19tLBoDJX0K9HLs6PJXLbxnln3LZNfacWMkAh8ePi1mCm9vXhemk+LDPUPcFAA5jC9suJQNIYAjJWUtigBggBug9gA8EOLt6rxtgzrZLUbPaf0Yb2UPTAAdsGy4YaYbrF+bopHCaAzKaKmPcr3HLeqKGc23gobrMbUQNc2XgI+dXuxE1xKdY6Crg26Ddx6dL1HRA+EKgPuBXuhc1x0pgO3QQ3ON59zOP6k9J8g1E+EwSUp3QygAAAABJRU5ErkJggg==" Selector="&lt;wnd app='ms-teams.exe' appid='MSTeams_8wekyb3d8bbwe!MSTeams' title='Chat | Juan Diego Moreno Mogollon | Microsoft Teams' /&gt;" Title="Chat | Juan Diego Moreno Mogollon | Microsoft Teams">
+      <imageRef attrName="InformativeScreenshot" originalValue="89533e9d8c4ab8e05e4370127b79b339.png" xmlns="">0uNj8mVv-RECPGhGxM4H0GA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
