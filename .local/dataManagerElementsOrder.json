@@ -12,6 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "archivo_proformas&Sequence_302",
+        "suma_total&Sequence_296",
+        "fecha_actual&Sequence_296",
         "numero_filas_visitas_ejecutadas&Sequence_175",
         "last_row_visitas&Sequence_175",
         "datos_transpaso_proformas&Sequence_175",
@@ -31,7 +34,6 @@
         "numero_visitas&Sequence_205",
         "visitas_ejecutadas&Sequence_205",
         "conversion_visitas_ejecutadas&Sequence_205",
-        "archivo_proformas&Sequence_275",
         "fecha_fin_inspección&Sequence_67",
         "conversion_fecha_inicio_inspeccion&Sequence_67",
         "fecha_inicio_inspección&Sequence_67",
