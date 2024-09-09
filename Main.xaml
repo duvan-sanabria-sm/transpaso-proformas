@@ -186,7 +186,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Diagrama de flujo" sap:VirtualizedContainerService.HintSize="1274,592" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Diagrama de flujo" sap:VirtualizedContainerService.HintSize="1096,592" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\" Name="ruta_revision_proformas" />
       <Variable x:TypeArguments="sd:DataTable" Name="datos_filtrados_proformas" />
@@ -1058,7 +1058,7 @@
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Filtrado por Estado NS y Porcentaje" sap:VirtualizedContainerService.HintSize="1444,9186" sap2010:WorkflowViewState.IdRef="Sequence_175">
+                      <Sequence DisplayName="Filtrado por Estado NS y Porcentaje" sap:VirtualizedContainerService.HintSize="1444,10026" sap2010:WorkflowViewState.IdRef="Sequence_175">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="numero_filas_visitas_ejecutadas" />
                           <Variable x:TypeArguments="x:Int32" Name="last_row_visitas" />
@@ -1070,33 +1070,33 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Uso: Documento filtra de actualización de proformas" sap:VirtualizedContainerService.HintSize="1382,9098" sap2010:WorkflowViewState.IdRef="Sequence_289">
+                        <Sequence DisplayName="Uso: Documento filtra de actualización de proformas" sap:VirtualizedContainerService.HintSize="1382,9938" sap2010:WorkflowViewState.IdRef="Sequence_289">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance proceso de Excel" sap:VirtualizedContainerService.HintSize="1320,8987" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_10">
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Alcance proceso de Excel" sap:VirtualizedContainerService.HintSize="1320,9827" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_10">
                             <ueab:ExcelProcessScopeX.Body>
                               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1286,8877" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1286,9717" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar el archivo Excel" sap:VirtualizedContainerService.HintSize="1224,8789" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" KeepExcelFileOpen="True" ResizeWindow="Maximize" TemplatePath="C:\Users\duvan.sanabria\Downloads\ExcelFilters\Suppliers.xlsx" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usar el archivo Excel" sap:VirtualizedContainerService.HintSize="1224,9629" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" KeepExcelFileOpen="True" ResizeWindow="Maximize" TemplatePath="C:\Users\duvan.sanabria\Downloads\ExcelFilters\Suppliers.xlsx" WorkbookPath="C:\Users\duvan.sanabria\OneDrive - Servimeters\Documentos\Notas Servimeters\Herramientas en uso\Robotización\Transpaso de Proformas\Documentación\Filtros Actualización de Proformas.xlsx">
                                     <ueab:ExcelApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="filtro_actualizacion" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Uso: Documento filtro de actualización de proformas " sap:VirtualizedContainerService.HintSize="1190,8497" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                        <Sequence DisplayName="Uso: Documento filtro de actualización de proformas " sap:VirtualizedContainerService.HintSize="1190,9337" sap2010:WorkflowViewState.IdRef="Sequence_73">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:String" Name="datos_proformas" />
                                             <Variable x:TypeArguments="sd:DataTable" Name="datos_total" />
@@ -1280,7 +1280,7 @@
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NClick>
                                           </Sequence>
-                                          <Sequence DisplayName="Traspaso de Proforma" sap:VirtualizedContainerService.HintSize="1128,6245" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                          <Sequence DisplayName="Traspaso de Proforma" sap:VirtualizedContainerService.HintSize="1128,7085" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:Int32" Default="[50%]" Name="limit" />
                                             </Sequence.Variables>
@@ -1314,20 +1314,20 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:BuildDataTable>
                                             </Sequence>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="1066,5222" sap2010:WorkflowViewState.IdRef="Sequence_281">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="1066,6062" sap2010:WorkflowViewState.IdRef="Sequence_281">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datos_transpaso_proformas]" DisplayName="Recorrer: Iterar cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="1004,5102" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datos_transpaso_proformas]" DisplayName="Recorrer: Iterar cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="1004,5942" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                                 <ui:ForEachRow.Body>
                                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                                     <ActivityAction.Argument>
                                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                     </ActivityAction.Argument>
-                                                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="970,4915" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="970,5755" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                                       <Sequence.Variables>
                                                         <Variable x:TypeArguments="x:String" Name="value_OS_NS" />
                                                         <Variable x:TypeArguments="x:String" Name="value_porcentaje" />
@@ -1411,7 +1411,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </Assign>
-                                                      <Sequence DisplayName="Validación y Actualización de Input" sap:VirtualizedContainerService.HintSize="908,4542" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                                      <Sequence DisplayName="Validación y Actualización de Input" sap:VirtualizedContainerService.HintSize="908,5382" sap2010:WorkflowViewState.IdRef="Sequence_97">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="x:Int32" Name="estado" />
                                                         </Sequence.Variables>
@@ -1435,7 +1435,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:InvokeCode>
-                                                        <If Condition="[estado = 1]" DisplayName="Condición 1: Proyecto Finalizado (100% de visitas realizadas)" sap:VirtualizedContainerService.HintSize="846,2103" sap2010:WorkflowViewState.IdRef="If_3">
+                                                        <If Condition="[estado = 1]" DisplayName="Condición 1: Proyecto Finalizado (100% de visitas realizadas)" sap:VirtualizedContainerService.HintSize="846,2775" sap2010:WorkflowViewState.IdRef="If_3">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -1443,20 +1443,20 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <If.Then>
-                                                            <Sequence DisplayName="Si cumple la condición" sap:VirtualizedContainerService.HintSize="750,1830" sap2010:WorkflowViewState.IdRef="Sequence_185">
+                                                            <Sequence DisplayName="Si cumple la condición" sap:VirtualizedContainerService.HintSize="750,2502" sap2010:WorkflowViewState.IdRef="Sequence_185">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Private: Chrome Resultados KS REPORTE CARTERA (ROBOT)" sap:VirtualizedContainerService.HintSize="688,1742" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V2" WindowResize="Maximize">
+                                                              <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Private: Chrome Resultados KS REPORTE CARTERA (ROBOT)" sap:VirtualizedContainerService.HintSize="688,2414" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V2" WindowResize="Maximize">
                                                                 <uix:NApplicationCard.Body>
                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                     <ActivityAction.Argument>
                                                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                     </ActivityAction.Argument>
-                                                                    <Sequence DisplayName="Modificación: A la orden de servicio " sap:VirtualizedContainerService.HintSize="654,1502" sap2010:WorkflowViewState.IdRef="Sequence_179">
+                                                                    <Sequence DisplayName="Modificación: A la orden de servicio " sap:VirtualizedContainerService.HintSize="654,2174" sap2010:WorkflowViewState.IdRef="Sequence_179">
                                                                       <Sequence.Variables>
                                                                         <Variable x:TypeArguments="x:String" Name="numero_visitas" />
                                                                         <Variable x:TypeArguments="x:String" Name="visitas_ejecutadas" />
@@ -1704,7 +1704,7 @@
                                                                           </Sequence>
                                                                         </TryCatch.Finally>
                                                                       </TryCatch>
-                                                                      <If Condition="[numero_visitas = value_programado OR conversion_visitas_ejecutadas.ToString = value_realizado]" sap:VirtualizedContainerService.HintSize="592,1241" sap2010:WorkflowViewState.IdRef="If_4">
+                                                                      <If Condition="[numero_visitas = value_programado OR conversion_visitas_ejecutadas.ToString = value_realizado]" sap:VirtualizedContainerService.HintSize="592,1913" sap2010:WorkflowViewState.IdRef="If_4">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -1712,7 +1712,7 @@
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <If.Then>
-                                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,1053" sap2010:WorkflowViewState.IdRef="Sequence_183">
+                                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,1725" sap2010:WorkflowViewState.IdRef="Sequence_183">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1730,7 +1730,7 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </usa:NSetValue>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar campo SM ESTADO" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar campo SM ESTADO" sap:VirtualizedContainerService.HintSize="496,225" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1469635&amp;whence=&amp;e=T" CVScreenId="ee0486eb-3204-4e7b-884b-198e9fbc2471" CvElementArea="7, 736, 283, 28" CvType="InputBox" DesignTimeRectangle="8, 737, 280, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableCol='50' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='inpt_custbody_sm_estado3' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='inpt_custbody_sm_estado3' type='text' tag='INPUT' class='dropdownInput textbox' aaname='EJECUTADO' /&gt;" Guid="cd903e5c-3156-485c-b38f-77cf0b17d7b1" InformativeScreenshot="a3a2ffdd72e546a9f6e6f6acb3a9999c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession44Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
@@ -1752,11 +1752,11 @@
                                                                               </uix:NClick.VerifyOptions>
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </uix:NClick>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar VALOR EJECUTADO" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="NClick_77" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar VALOR EJECUTADO" sap:VirtualizedContainerService.HintSize="496,225" sap2010:WorkflowViewState.IdRef="NClick_77" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1469635&amp;whence=&amp;e=T" CVScreenId="cfe8528d-d523-4620-95e2-55b164a3f455" CvTextArea="11, 825, 72, 15" CvTextArgument="EJECUTADO" CvType="Text" DesignTimeRectangle="9, 818, 280, 28" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='nl3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nl3' tag='DIV' type='' class='dropdownSelected' aaname='EJECUTADO' check:innerText='EJECUTADO' /&gt;" Guid="0075c045-c85c-47ce-8185-4f792675b111" InformativeScreenshot="592267f884846ac37256ccac9b3fc24e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession44Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
@@ -1778,11 +1778,11 @@
                                                                               </uix:NClick.VerifyOptions>
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </uix:NClick>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar campo SM TIPOS DE ESTADO" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="NClick_78" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar campo SM TIPOS DE ESTADO" sap:VirtualizedContainerService.HintSize="496,225" sap2010:WorkflowViewState.IdRef="NClick_78" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1408718&amp;whence=&amp;e=T" CVScreenId="65d3fe0c-67e8-48b1-ba4f-1b66dc33a642" CvElementArea="413, 680, 283, 28" CvType="InputBox" DesignTimeRectangle="415, 682, 280, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableCol='51' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='inpt_custbody_sm_tipos_estado5' tableRow='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='inpt_custbody_sm_tipos_estado5' type='text' tag='INPUT' class='dropdownInput textbox' aaname='' /&gt;" Guid="d86c8b27-b1cd-42cf-abc0-4e869acb8f67" InformativeScreenshot="7d58e51e3ec3e98bacfac4532937bead.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession219Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
@@ -1804,16 +1804,16 @@
                                                                               </uix:NClick.VerifyOptions>
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </uix:NClick>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar valor PROYECTO FINALIZADO" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="NClick_79" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar valor PROYECTO FINALIZADO" sap:VirtualizedContainerService.HintSize="496,225" sap2010:WorkflowViewState.IdRef="NClick_79" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                               <uix:NClick.Target>
-                                                                                <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1408718&amp;whence=&amp;e=T" CVScreenId="4e1f1f74-accc-4e6f-8ef3-ab1fff9e7d6c" CvTextArea="418, 827, 144, 12" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="416, 819, 280, 28" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='nl12' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nl12' tag='DIV' type='' class='dropdownNotSelected' aaname='PROYECTO FINALIZADO' check:innerText='PROYECTO FINALIZADO' /&gt;" Guid="434a98bf-db25-4dd2-a835-a92f1e26afb3" InformativeScreenshot="fd74e0e0077866fcb3f1a354b1a9ff76.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession219Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                                                <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1031453&amp;whence=&amp;e=T" CVScreenId="87635b43-7105-47dd-acae-4e171a88411b" CvTextArea="651, 842, 130, 12" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="649, 835, 252, 25" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl id='nl12' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nl12' tag='DIV' type='' class='dropdownNotSelected' aaname='PROYECTO FINALIZADO' check:innerText='PROYECTO FINALIZADO' /&gt;" Guid="d6890478-fe08-4b79-b72d-c4980c122e09" InformativeScreenshot="d1b1a29e8151aabef625f1a59e736a2b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession506Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
-                                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                                      <uix:Target CVScreenId="4e1f1f74-accc-4e6f-8ef3-ab1fff9e7d6c" CvTextArea="413, 667, 123, 12" CvTextArgument="SM TIPOS DE ESTADO" CvType="Text" DesignTimeRectangle="415, 665, 120, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='51' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='smallgraytextnolink' aaname='SM TIPOS DE ESTADO' check:innerText='SM TIPOS DE ESTADO' /&gt;" Guid="7a4cf144-610e-4479-a36d-1b53b9ee2d15" SearchSteps="FuzzySelector, CV" />
+                                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                                      <uix:Target CVScreenId="87635b43-7105-47dd-acae-4e171a88411b" CvTextArea="647, 701, 110, 12" CvTextArgument="SM TIPOS DE ESTADO" CvType="Text" DesignTimeRectangle="648, 699, 109, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='49' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='smallgraytextnolink' aaname='SM TIPOS DE ESTADO' check:innerText='SM TIPOS DE ESTADO' /&gt;" Guid="23db6ba7-8e59-4cca-835b-99448506d682" SearchSteps="Selector, FuzzySelector, CV" />
                                                                                     </scg:List>
                                                                                   </uix:TargetAnchorable.Anchors>
                                                                                 </uix:TargetAnchorable>
@@ -1830,7 +1830,7 @@
                                                                               </uix:NClick.VerifyOptions>
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </uix:NClick>
@@ -1944,7 +1944,7 @@
                                                             </Sequence>
                                                           </If.Else>
                                                         </If>
-                                                        <If Condition="[estado = 2]" DisplayName="Condición 2: Finalizado por Directriz (1 de 2 visitas realizadas)" sap:VirtualizedContainerService.HintSize="846,2131" sap2010:WorkflowViewState.IdRef="If_5">
+                                                        <If Condition="[estado = 2]" DisplayName="Condición 2: Finalizado por Directriz (1 de 2 visitas realizadas)" sap:VirtualizedContainerService.HintSize="846,2299" sap2010:WorkflowViewState.IdRef="If_5">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -1952,27 +1952,27 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <If.Then>
-                                                            <Sequence DisplayName="Si cumple la condición" sap:VirtualizedContainerService.HintSize="812,1945" sap2010:WorkflowViewState.IdRef="Sequence_191">
+                                                            <Sequence DisplayName="Si cumple la condición" sap:VirtualizedContainerService.HintSize="812,2113" sap2010:WorkflowViewState.IdRef="Sequence_191">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Resultados KS REPORTE CARTERA (ROBOT): - NetSuite (SERVIMETERS S.A.S)" sap:VirtualizedContainerService.HintSize="750,1857" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V2" WindowResize="Maximize">
+                                                              <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Resultados KS REPORTE CARTERA (ROBOT): - NetSuite (SERVIMETERS S.A.S)" sap:VirtualizedContainerService.HintSize="750,2025" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V2" WindowResize="Maximize">
                                                                 <uix:NApplicationCard.Body>
                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                     <ActivityAction.Argument>
                                                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                     </ActivityAction.Argument>
-                                                                    <Sequence sap:VirtualizedContainerService.HintSize="716,1617" sap2010:WorkflowViewState.IdRef="Sequence_211">
+                                                                    <Sequence sap:VirtualizedContainerService.HintSize="716,1785" sap2010:WorkflowViewState.IdRef="Sequence_211">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <Sequence DisplayName="Modificación: A la orden de servicio " sap:VirtualizedContainerService.HintSize="654,1527" sap2010:WorkflowViewState.IdRef="Sequence_205">
+                                                                      <Sequence DisplayName="Modificación: A la orden de servicio " sap:VirtualizedContainerService.HintSize="654,1695" sap2010:WorkflowViewState.IdRef="Sequence_205">
                                                                         <Sequence.Variables>
                                                                           <Variable x:TypeArguments="x:String" Name="numero_visitas" />
                                                                           <Variable x:TypeArguments="x:String" Name="visitas_ejecutadas" />
@@ -2010,7 +2010,7 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </uix:NTypeInto>
-                                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Buscar el número de la orden de servicio" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Buscar el número de la orden de servicio" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                           <uix:NClick.Target>
                                                                             <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/common/search/searchresults.nl?searchid=2010&amp;whence=" DesignTimeRectangle="415, 208, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='uif39' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uif39' tag='svg' type='' class='uif629 uif632 uif733 uif736 uif751 uif752' aaname='' /&gt;" Guid="4e016198-b1ea-4123-95f1-ce5ba14bbcac" InformativeScreenshot="db133c6536d74941c4b71e600bdb9ffd.png" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                                                               <uix:TargetAnchorable.Anchors>
@@ -2223,7 +2223,7 @@
                                                                             </Sequence>
                                                                           </TryCatch.Finally>
                                                                         </TryCatch>
-                                                                        <If Condition="[numero_visitas = value_programado OR conversion_visitas_ejecutadas.ToString = value_realizado]" sap:VirtualizedContainerService.HintSize="592,1241" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                        <If Condition="[numero_visitas = value_programado OR conversion_visitas_ejecutadas.ToString = value_realizado]" sap:VirtualizedContainerService.HintSize="592,1409" sap2010:WorkflowViewState.IdRef="If_8">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -2231,7 +2231,7 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                           <If.Then>
-                                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,1053" sap2010:WorkflowViewState.IdRef="Sequence_208">
+                                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,1221" sap2010:WorkflowViewState.IdRef="Sequence_208">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2372,12 +2372,12 @@
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                               </uix:NClick>
-                                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar FINALIZADO POR DIRECTRIZ" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="NClick_85" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
+                                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click: Seleccionar FINALIZADO POR DIRECTRIZ" sap:VirtualizedContainerService.HintSize="496,225" sap2010:WorkflowViewState.IdRef="NClick_85" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3102ee9e-17f0-4657-bdd9-ff272a1d1074" Version="V3">
                                                                                 <uix:NClick.Target>
-                                                                                  <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1408718&amp;whence=&amp;e=T" CVScreenId="e8ccd84a-ccb4-41c3-ad01-fe9e77cc8e2a" CvTextArea="418, 771, 172, 12" CvTextArgument="FINALIZADO POR DIRECTRIZ" CvType="Text" DesignTimeRectangle="416, 763, 280, 28" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='nl22' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nl22' tag='DIV' type='' class='dropdownSelected' aaname='FINALIZADO POR DIRECTRIZ' check:innerText='FINALIZADO POR DIRECTRIZ' /&gt;" Guid="f806cb49-ddce-41f5-8627-c9cf12537aa4" InformativeScreenshot="ab1453787bafc36d76669abfabfa6182.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession214Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                                                  <uix:TargetAnchorable BrowserURL="https://5845631.app.netsuite.com/app/accounting/transactions/salesord.nl?id=1031453&amp;whence=&amp;e=T" CVScreenId="89e0e87d-1124-4b03-941d-3c891374e7db" CvTextArea="651, 842, 131, 12" CvTextArgument="PROYECTO FINALIZADO" CvType="Text" DesignTimeRectangle="649, 835, 252, 25" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl id='nl12' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nl12' tag='DIV' type='' class='dropdownNotSelected' aaname='PROYECTO FINALIZADO' check:innerText='PROYECTO FINALIZADO' /&gt;" Guid="21d0d308-279c-4721-9e43-cae05efacf35" InformativeScreenshot="0321bc6298997197a4a185b6aba5e553.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='stSession506Id' title='Orden de Servicio - NetSuite (SERVIMETERS S.A.S)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                     <uix:TargetAnchorable.Anchors>
-                                                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                                        <uix:Target CVScreenId="e8ccd84a-ccb4-41c3-ad01-fe9e77cc8e2a" CvTextArea="413, 667, 123, 12" CvTextArgument="SM TIPOS DE ESTADO" CvType="Text" DesignTimeRectangle="415, 665, 120, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='51' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='smallgraytextnolink' aaname='SM TIPOS DE ESTADO' check:innerText='SM TIPOS DE ESTADO' /&gt;" Guid="dced4c90-c9fa-42d8-9fc7-fe88e1eb0751" SearchSteps="FuzzySelector, CV" />
+                                                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                                        <uix:Target CVScreenId="89e0e87d-1124-4b03-941d-3c891374e7db" CvTextArea="647, 701, 110, 11" CvTextArgument="SM TIPOS DE ESTADO" CvType="Text" DesignTimeRectangle="648, 699, 109, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='49' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='smallgraytextnolink' aaname='SM TIPOS DE ESTADO' check:innerText='SM TIPOS DE ESTADO' /&gt;" Guid="653cc3b0-6bf2-4729-8f22-7ad9fc80e3e6" SearchSteps="Selector, FuzzySelector, CV" />
                                                                                       </scg:List>
                                                                                     </uix:TargetAnchorable.Anchors>
                                                                                   </uix:TargetAnchorable>
@@ -2394,7 +2394,7 @@
                                                                                 </uix:NClick.VerifyOptions>
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                               </uix:NClick>
@@ -2734,7 +2734,7 @@
                                                 </Sequence>
                                               </ui:CommentOut.Body>
                                             </ui:CommentOut>
-                                            <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="duvan.sanabria@servimeters.com" DisplayName="Use Outlook 365" EmailAddress="duvan.sanabria@servimeters.com" sap:VirtualizedContainerService.HintSize="450,815" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_2" UseConnectionService="False">
+                                            <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="magda.rodriguez@servimeters.com" DisplayName="Use Outlook 365" EmailAddress="magda.rodriguez@servimeters.com" sap:VirtualizedContainerService.HintSize="450,815" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_2" UseConnectionService="False">
                                               <umab:ExchangeApplicationCard.ApplicationId>
                                                 <InArgument x:TypeArguments="x:String">
                                                   <Literal x:TypeArguments="x:String" Value="" />
@@ -2755,20 +2755,12 @@
                                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Inicializar el mensaje HTML&#xD;&#xA;Dim htmlMessage As String = &quot;&lt;p&gt;Espero que se encuentre bien.&lt;/p&gt;&quot;&#xD;&#xA;htmlMessage &amp;= &quot;&lt;p&gt;Adjunto la tabla del traspaso de proformas correspondientes a [nombre del proyecto, producto o servicio]. En este documento encontrará los detalles necesarios para su revisión.&lt;br&gt;&quot;&#xD;&#xA;htmlMessage &amp;= &quot;Si tiene alguna pregunta o necesita más información, no dude en contactarme. Estoy a su disposición para cualquier aclaración que requiera.&lt;br&gt;&quot;&#xD;&#xA;htmlMessage &amp;= &quot;Agradezco su atención y quedo a la espera de su confirmación.&lt;br&gt;&quot;&#xD;&#xA;htmlMessage &amp;= &quot;Saludos cordiales,&lt;/p&gt;&quot;&#xD;&#xA;&#xD;&#xA;' Inicializar la tabla HTML con encabezados&#xD;&#xA;htmlTable = &quot;&lt;table border='1' cellpadding='5'&gt;&lt;thead&gt;&lt;tr&gt;&quot;&#xD;&#xA;htmlTable &amp;= &quot;&lt;th&gt;OS_NS&lt;/th&gt;&lt;th&gt;Total&lt;/th&gt;&quot;&#xD;&#xA;htmlTable &amp;= &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;&#xD;&#xA;&#xD;&#xA;' Recorrer cada fila de datos_total y mostrar solo las columnas os_ns y total&#xD;&#xA;For Each row As DataRow In datos_total.Rows&#xD;&#xA;    htmlTable &amp;= &quot;&lt;tr&gt;&quot;&#xD;&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; row(&quot;os_ns&quot;).ToString() &amp; &quot;&lt;/td&gt;&quot;&#xD;&#xA;    &#xD;&#xA;    ' Convertir el valor a decimal con 2 decimales y comas para miles&#xD;&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; Convert.ToDecimal(row(&quot;total&quot;)).ToString(&quot;N2&quot;) &amp; &quot;&lt;/td&gt;&quot;&#xD;&#xA;    htmlTable &amp;= &quot;&lt;/tr&gt;&quot;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;' Agregar la fila de suma total con formato decimal y separadores de miles&#xD;&#xA;htmlTable &amp;= &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;&quot; &amp; suma_total.ToString(&quot;N2&quot;) &amp; &quot;&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&quot;&#xD;&#xA;&#xD;&#xA;' Cerrar la tabla HTML&#xD;&#xA;htmlTable &amp;= &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;&#xD;&#xA;&#xD;&#xA;' Unir el mensaje HTML con la tabla&#xD;&#xA; cuerpo_html  = htmlMessage &amp; htmlTable&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+                                                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Inicializar el mensaje HTML&#xA;Dim htmlMessage As String = &quot;&lt;p&gt;Espero que se encuentre bien.&lt;/p&gt;&quot;&#xA;htmlMessage &amp;= &quot;&lt;p&gt;Adjunto la tabla del traspaso de proformas correspondientes a [nombre del proyecto, producto o servicio]. En este documento encontrará los detalles necesarios para su revisión.&lt;br&gt;&quot;&#xA;htmlMessage &amp;= &quot;Si tiene alguna pregunta o necesita más información, no dude en contactarme. Estoy a su disposición para cualquier aclaración que requiera.&lt;br&gt;&quot;&#xA;htmlMessage &amp;= &quot;Agradezco su atención y quedo a la espera de su confirmación.&lt;br&gt;&quot;&#xA;htmlMessage &amp;= &quot;Saludos cordiales,&lt;/p&gt;&quot;&#xA;&#xA;' Inicializar la tabla HTML con encabezados&#xA;htmlTable = &quot;&lt;table border='1' cellpadding='5'&gt;&lt;thead&gt;&lt;tr&gt;&quot;&#xA;htmlTable &amp;= &quot;&lt;th&gt;OS_NS&lt;/th&gt;&lt;th&gt;Total&lt;/th&gt;&quot;&#xA;htmlTable &amp;= &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;&#xA;&#xA;' Recorrer cada fila de datos_total y mostrar solo las columnas os_ns y total&#xA;For Each row As DataRow In datos_total.Rows&#xA;    htmlTable &amp;= &quot;&lt;tr&gt;&quot;&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; row(&quot;os_ns&quot;).ToString() &amp; &quot;&lt;/td&gt;&quot;&#xA;    &#xA;    ' Convertir el valor a decimal con 2 decimales y comas para miles&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; Convert.ToDecimal(row(&quot;total&quot;)).ToString(&quot;N2&quot;) &amp; &quot;&lt;/td&gt;&quot;&#xA;    htmlTable &amp;= &quot;&lt;/tr&gt;&quot;&#xA;Next&#xA;&#xA;' Agregar la fila de suma total con formato decimal y separadores de miles&#xA;htmlTable &amp;= &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;&quot; &amp; suma_total.ToString(&quot;N2&quot;) &amp; &quot;&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&quot;&#xA;&#xA;' Cerrar la tabla HTML&#xA;htmlTable &amp;= &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;&#xA;&#xA;' Unir el mensaje HTML con la tabla&#xA; cuerpo_html  = htmlMessage &amp; htmlTable&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                                                       <ui:InvokeCode.Arguments>
-                                                        <InArgument x:TypeArguments="sd:DataTable" x:Key="datos_total">
-                                                          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="datos_total" />
-                                                        </InArgument>
-                                                        <InArgument x:TypeArguments="x:Double" x:Key="suma_total">
-                                                          <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="suma_total" />
-                                                        </InArgument>
-                                                        <InOutArgument x:TypeArguments="x:String" x:Key="cuerpo_html">
-                                                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="cuerpo_html" />
-                                                        </InOutArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="htmlTable">
-                                                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="tabla_html" />
-                                                        </InArgument>
+                                                        <InArgument x:TypeArguments="sd:DataTable" x:Key="datos_total">[datos_total]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Double" x:Key="suma_total">[suma_total]</InArgument>
+                                                        <InOutArgument x:TypeArguments="x:String" x:Key="cuerpo_html">[cuerpo_html]</InOutArgument>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="htmlTable">[tabla_html]</InArgument>
                                                       </ui:InvokeCode.Arguments>
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
