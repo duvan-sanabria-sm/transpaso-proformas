@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "cuerpo_html&Sequence_382",
         "cuerpo_html&Sequence_320",
         "archivo_proformas&Sequence_371",
         "conversion_fecha_fin_inspeccion&Sequence_283",

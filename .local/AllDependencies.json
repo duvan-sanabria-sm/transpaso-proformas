@@ -65,7 +65,7 @@
           }
         }
       },
-      "BouncyCastle.Cryptography/2.3.0": {
+      "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {
@@ -277,10 +277,11 @@
           "lib/netstandard1.6/Irony.dll": {}
         }
       },
-      "MailKit/4.4.0": {
+      "MailKit/4.7.1.1": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "4.4.0"
+          "MimeKit": "4.7.1",
+          "System.Formats.Asn1": "8.0.1"
         },
         "compile": {
           "lib/net8.0/_._": {
@@ -1590,13 +1591,12 @@
           }
         }
       },
-      "MimeKit/4.4.0": {
+      "MimeKit/4.7.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.3.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "8.0.0",
-          "System.Text.Encoding.CodePages": "8.0.0"
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Security.Cryptography.Pkcs": "8.0.0"
         },
         "compile": {
           "lib/net8.0/_._": {
@@ -2634,7 +2634,7 @@
           }
         }
       },
-      "System.Formats.Asn1/8.0.0": {
+      "System.Formats.Asn1/8.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/_._": {
@@ -4117,15 +4117,15 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/8.0.0": {
+      "System.Text.Encoding.CodePages/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
@@ -4133,7 +4133,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -4855,28 +4855,29 @@
           "lib/net6.0-windows7.0/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.23.1": {
+      "UiPath.Mail.Activities/1.23.11": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
           "Google.Apis.Gmail.v1": "1.55.0.2510",
           "Google.Apis.PeopleService.v1": "1.55.0.2567",
           "HtmlAgilityPack": "1.11.38",
-          "MailKit": "4.4.0",
+          "MailKit": "4.7.1.1",
           "Microsoft.Extensions.FileSystemGlobbing": "6.0.0",
           "Microsoft.Graph": "4.11.0",
           "Newtonsoft.Json": "13.0.1",
           "System.ComponentModel.Annotations": "5.0.0",
-          "System.Configuration.ConfigurationManager": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7",
           "System.IdentityModel.Tokens.Jwt": "6.34.0",
           "System.Linq.Async.Queryable": "5.0.0",
           "System.Net.Http": "4.3.4",
-          "System.Security.Cryptography.ProtectedData": "5.0.0",
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.ValueTuple": "4.5.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
+          "UiPath.OfficeLibs": "1.0.0",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -4886,9 +4887,6 @@
         "runtime": {
           "lib/net6.0-windows7.0/Interop.Domino.UiPath.dll": {},
           "lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll": {},
-          "lib/net6.0-windows7.0/Office.dll": {},
           "lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll": {
             "related": ".xml"
           },
@@ -5301,6 +5299,21 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
+      },
+      "UiPath.OfficeLibs/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.PowerPoint.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll": {},
+          "lib/net6.0-windows7.0/OFFICE.dll": {},
+          "lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll": {}
+        }
       },
       "UiPath.OpenTelemetry.Contracts/2.1.3": {
         "type": "package",
@@ -6165,7 +6178,7 @@
           }
         }
       },
-      "BouncyCastle.Cryptography/2.3.0": {
+      "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {
@@ -6377,10 +6390,11 @@
           "lib/netstandard1.6/Irony.dll": {}
         }
       },
-      "MailKit/4.4.0": {
+      "MailKit/4.7.1.1": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "4.4.0"
+          "MimeKit": "4.7.1",
+          "System.Formats.Asn1": "8.0.1"
         },
         "compile": {
           "lib/net8.0/_._": {
@@ -7578,13 +7592,12 @@
           "runtimes/win/lib/net6.0/Microsoft.WSMan.Runtime.dll": {}
         }
       },
-      "MimeKit/4.4.0": {
+      "MimeKit/4.7.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.3.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "8.0.0",
-          "System.Text.Encoding.CodePages": "8.0.0"
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Security.Cryptography.Pkcs": "8.0.0"
         },
         "compile": {
           "lib/net8.0/_._": {
@@ -8708,7 +8721,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Formats.Asn1/8.0.0": {
+      "System.Formats.Asn1/8.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/_._": {
@@ -10087,15 +10100,15 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/8.0.0": {
+      "System.Text.Encoding.CodePages/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
@@ -10821,28 +10834,29 @@
           "lib/net6.0-windows7.0/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.23.1": {
+      "UiPath.Mail.Activities/1.23.11": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
           "Google.Apis.Gmail.v1": "1.55.0.2510",
           "Google.Apis.PeopleService.v1": "1.55.0.2567",
           "HtmlAgilityPack": "1.11.38",
-          "MailKit": "4.4.0",
+          "MailKit": "4.7.1.1",
           "Microsoft.Extensions.FileSystemGlobbing": "6.0.0",
           "Microsoft.Graph": "4.11.0",
           "Newtonsoft.Json": "13.0.1",
           "System.ComponentModel.Annotations": "5.0.0",
-          "System.Configuration.ConfigurationManager": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7",
           "System.IdentityModel.Tokens.Jwt": "6.34.0",
           "System.Linq.Async.Queryable": "5.0.0",
           "System.Net.Http": "4.3.4",
-          "System.Security.Cryptography.ProtectedData": "5.0.0",
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.ValueTuple": "4.5.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
+          "UiPath.OfficeLibs": "1.0.0",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -10852,9 +10866,6 @@
         "runtime": {
           "lib/net6.0-windows7.0/Interop.Domino.UiPath.dll": {},
           "lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll": {},
-          "lib/net6.0-windows7.0/Office.dll": {},
           "lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll": {
             "related": ".xml"
           },
@@ -11267,6 +11278,21 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
+      },
+      "UiPath.OfficeLibs/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.PowerPoint.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll": {},
+          "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll": {},
+          "lib/net6.0-windows7.0/OFFICE.dll": {},
+          "lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll": {}
+        }
       },
       "UiPath.OpenTelemetry.Contracts/2.1.3": {
         "type": "package",
@@ -12124,16 +12150,16 @@
         "pkgicon.png"
       ]
     },
-    "BouncyCastle.Cryptography/2.3.0": {
-      "sha512": "IaVIiYxZLaBulveGDRUx/pBoW/Rc8QeXGF5u2E8xL8RWhVKCgfmtX9NUyGRbnSqnbFQU2zyP3MkXIdH+jUuQBw==",
+    "BouncyCastle.Cryptography/2.4.0": {
+      "sha512": "SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
       "type": "package",
-      "path": "bouncycastle.cryptography/2.3.0",
+      "path": "bouncycastle.cryptography/2.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "bouncycastle.cryptography.2.3.0.nupkg.sha512",
+        "bouncycastle.cryptography.2.4.0.nupkg.sha512",
         "bouncycastle.cryptography.nuspec",
         "lib/net461/BouncyCastle.Cryptography.dll",
         "lib/net461/BouncyCastle.Cryptography.xml",
@@ -12438,10 +12464,10 @@
         "lib/netstandard1.6/Irony.dll"
       ]
     },
-    "MailKit/4.4.0": {
-      "sha512": "cv+oiAOn2+LhhGUVvxpJjEOIZOTZBFDIDO9ebOfxqqU1f/PllHpKr5VjWOBsqeLrb+zLisxWSQDzM5C64XrRNA==",
+    "MailKit/4.7.1.1": {
+      "sha512": "Y3okmIxu8g/ZcoJiE2i+dCeKgnNyddsXmcJslZnCPGVPP0aRyeVINHV1h97V+OVMdqjQI6O12J2p8Duwq5UEqQ==",
       "type": "package",
-      "path": "mailkit/4.4.0",
+      "path": "mailkit/4.7.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -12478,7 +12504,7 @@
         "lib/netstandard2.1/MailKit.dll.config",
         "lib/netstandard2.1/MailKit.pdb",
         "lib/netstandard2.1/MailKit.xml",
-        "mailkit.4.4.0.nupkg.sha512",
+        "mailkit.4.7.1.1.nupkg.sha512",
         "mailkit.nuspec"
       ]
     },
@@ -14479,10 +14505,10 @@
         "runtimes/win/lib/net6.0/Microsoft.WSMan.Runtime.dll"
       ]
     },
-    "MimeKit/4.4.0": {
-      "sha512": "pKvznVpvK35cJb21LdjvhB3MW2FrlAqG3PH36uVKHhlgnfMS5tIRsKJEMgo0hiPyJJhN2f1llHptu2w8CvF9Vg==",
+    "MimeKit/4.7.1": {
+      "sha512": "Qoj4aVvhX14A1FNvaJ33hzOP4VZI2j+Mr38I9wSGcjMq4BYDtWLJG89aJ9nRW2cNfH6Czjwyp7+Mh++xv3AZvg==",
       "type": "package",
-      "path": "mimekit/4.4.0",
+      "path": "mimekit/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -14517,7 +14543,7 @@
         "lib/netstandard2.1/MimeKit.dll.config",
         "lib/netstandard2.1/MimeKit.pdb",
         "lib/netstandard2.1/MimeKit.xml",
-        "mimekit.4.4.0.nupkg.sha512",
+        "mimekit.4.7.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -16853,10 +16879,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Formats.Asn1/8.0.0": {
-      "sha512": "AJukBuLoe3QeAF+mfaRKQb2dgyrvt340iMBHYv+VdBzCUM06IxGlvl0o/uPOS7lHnXPN6u8fFRHSHudx5aTi8w==",
+    "System.Formats.Asn1/8.0.1": {
+      "sha512": "XqKba7Mm/koKSjKMfW82olQdmfbI5yqeoLV/tidRp7fbh5rmHAQ5raDI/7SU0swTzv+jgqtUGkzmFxuUg0it1A==",
       "type": "package",
-      "path": "system.formats.asn1/8.0.0",
+      "path": "system.formats.asn1/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -16877,7 +16903,7 @@
         "lib/net8.0/System.Formats.Asn1.xml",
         "lib/netstandard2.0/System.Formats.Asn1.dll",
         "lib/netstandard2.0/System.Formats.Asn1.xml",
-        "system.formats.asn1.8.0.0.nupkg.sha512",
+        "system.formats.asn1.8.0.1.nupkg.sha512",
         "system.formats.asn1.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -20168,16 +20194,15 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/8.0.0": {
-      "sha512": "OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
+    "System.Text.Encoding.CodePages/7.0.0": {
+      "sha512": "LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
       "type": "package",
-      "path": "system.text.encoding.codepages/8.0.0",
+      "path": "system.text.encoding.codepages/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
         "buildTransitive/net462/_._",
@@ -20191,8 +20216,6 @@
         "lib/net6.0/System.Text.Encoding.CodePages.xml",
         "lib/net7.0/System.Text.Encoding.CodePages.dll",
         "lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "lib/net8.0/System.Text.Encoding.CodePages.xml",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
@@ -20203,9 +20226,7 @@
         "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.8.0.0.nupkg.sha512",
+        "system.text.encoding.codepages.7.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -21480,18 +21501,15 @@
         "uipath.imageprocessing.nuspec"
       ]
     },
-    "UiPath.Mail.Activities/1.23.1": {
-      "sha512": "eHHMkz4g3P0Tfx7tbuB/7JCUMr7l8Pb+XhV/5Gc8W55vvGB41uBA34scIPgth5+X0BGg4tr2gskI0kSgmI3QRw==",
+    "UiPath.Mail.Activities/1.23.11": {
+      "sha512": "iJ1Ws3ZeF67otv/GKqF0s48qDmC2hAaLPZd/JzUW+HnP3lZ6uOVuPD7FBqpAf7BPt2V5fjlKoojeBeZUyTIrdQ==",
       "type": "package",
-      "path": "uipath.mail.activities/1.23.1",
+      "path": "uipath.mail.activities/1.23.11",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/Interop.Domino.UiPath.dll",
-        "lib/net461/Microsoft.Office.Interop.Outlook.dll",
-        "lib/net461/Microsoft.Office.Interop.Word.dll",
-        "lib/net461/Office.dll",
         "lib/net461/UiPath.Mail.Activities.Design.dll",
         "lib/net461/UiPath.Mail.Activities.Package.pdb",
         "lib/net461/UiPath.Mail.Activities.dll",
@@ -21538,9 +21556,6 @@
         "lib/net461/zu/UiPath.Mail.resources.dll",
         "lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
         "lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
-        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "lib/net6.0-windows7.0/Office.dll",
         "lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
         "lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.xml",
         "lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
@@ -21613,12 +21628,20 @@
         "tools/net461/MainSessionServer/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
         "tools/net461/MainSessionServer/Microsoft.Extensions.Options.dll",
         "tools/net461/MainSessionServer/Microsoft.Extensions.Primitives.dll",
-        "tools/net461/MainSessionServer/Microsoft.IO.RecyclableMemoryStream.dll",
         "tools/net461/MainSessionServer/Microsoft.Win32.Primitives.dll",
         "tools/net461/MainSessionServer/Newtonsoft.Json.dll",
+        "tools/net461/MainSessionServer/Nito.AsyncEx.Context.dll",
+        "tools/net461/MainSessionServer/Nito.AsyncEx.Coordination.dll",
+        "tools/net461/MainSessionServer/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "tools/net461/MainSessionServer/Nito.AsyncEx.Oop.dll",
+        "tools/net461/MainSessionServer/Nito.AsyncEx.Tasks.dll",
+        "tools/net461/MainSessionServer/Nito.Cancellation.dll",
+        "tools/net461/MainSessionServer/Nito.Collections.Deque.dll",
+        "tools/net461/MainSessionServer/Nito.Disposables.dll",
         "tools/net461/MainSessionServer/System.AppContext.dll",
         "tools/net461/MainSessionServer/System.Buffers.dll",
         "tools/net461/MainSessionServer/System.Collections.Concurrent.dll",
+        "tools/net461/MainSessionServer/System.Collections.Immutable.dll",
         "tools/net461/MainSessionServer/System.Collections.NonGeneric.dll",
         "tools/net461/MainSessionServer/System.Collections.Specialized.dll",
         "tools/net461/MainSessionServer/System.Collections.dll",
@@ -21673,6 +21696,7 @@
         "tools/net461/MainSessionServer/System.Net.WebSockets.dll",
         "tools/net461/MainSessionServer/System.Numerics.Vectors.dll",
         "tools/net461/MainSessionServer/System.ObjectModel.dll",
+        "tools/net461/MainSessionServer/System.Private.Uri.dll",
         "tools/net461/MainSessionServer/System.Reflection.DispatchProxy.dll",
         "tools/net461/MainSessionServer/System.Reflection.Extensions.dll",
         "tools/net461/MainSessionServer/System.Reflection.Primitives.dll",
@@ -21728,7 +21752,7 @@
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.dll",
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.pdb",
         "tools/net461/MainSessionServer/netstandard.dll",
-        "uipath.mail.activities.1.23.1.nupkg.sha512",
+        "uipath.mail.activities.1.23.11.nupkg.sha512",
         "uipath.mail.activities.nuspec"
       ]
     },
@@ -22204,6 +22228,31 @@
         "lib/net6.0/UiPath.OCR.Contracts.xml",
         "uipath.ocr.contracts.2.16.0.nupkg.sha512",
         "uipath.ocr.contracts.nuspec"
+      ]
+    },
+    "UiPath.OfficeLibs/1.0.0": {
+      "sha512": "AcXMguCTwHp2r06bq/WZ7Txh13B4Tq/Sug071r8CxXltQb4fjjLnWd7yP2EusMDGnXDac0NqQLW3EsZm64RVMQ==",
+      "type": "package",
+      "path": "uipath.officelibs/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.Office.Interop.Excel.dll",
+        "lib/net461/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net461/Microsoft.Office.Interop.PowerPoint.dll",
+        "lib/net461/Microsoft.Office.Interop.Word.dll",
+        "lib/net461/Microsoft.Vbe.Interop.dll",
+        "lib/net461/OFFICE.dll",
+        "lib/net461/UiPath.OfficeLibs.Package.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.PowerPoint.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "lib/net6.0-windows7.0/OFFICE.dll",
+        "lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll",
+        "uipath.officelibs.1.0.0.nupkg.sha512",
+        "uipath.officelibs.nuspec"
       ]
     },
     "UiPath.OpenTelemetry.Contracts/2.1.3": {
@@ -23151,7 +23200,7 @@
     "net8.0-windows7.0": [
       "UiPath.Database.Activities >= 1.8.2-preview <= 1.8.2-preview",
       "UiPath.Excel.Activities >= 2.23.4 <= 2.23.4",
-      "UiPath.Mail.Activities >= 1.23.1 <= 1.23.1",
+      "UiPath.Mail.Activities >= 1.23.11 <= 1.23.11",
       "UiPath.MicrosoftOffice365.Activities >= 2.6.25 <= 2.6.25",
       "UiPath.System.Activities >= 24.10.3 <= 24.10.3",
       "UiPath.Testing.Activities >= 24.10.0 <= 24.10.0",
@@ -23185,7 +23234,7 @@
           "UiPath.Mail.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.23.1, 1.23.1]"
+            "version": "[1.23.11, 1.23.11]"
           },
           "UiPath.MicrosoftOffice365.Activities": {
             "include": "Runtime",
