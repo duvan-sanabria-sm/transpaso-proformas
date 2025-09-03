@@ -9,7 +9,8 @@
     "UiPath.MicrosoftOffice365.Activities": "[2.8.22]",
     "UiPath.System.Activities": "[24.10.7]",
     "UiPath.Testing.Activities": "[24.10.3]",
-    "UiPath.UIAutomation.Activities": "[24.10.10]"
+    "UiPath.UIAutomation.Activities": "[24.10.10]",
+    "UiPath.WebAPI.Activities": "[2.1.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],

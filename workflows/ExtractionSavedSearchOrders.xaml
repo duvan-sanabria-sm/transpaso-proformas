@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtractionSavedSearchOrdes" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ExtractionSavedSearchOrdes_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:stjsm="clr-namespace:System.Text.Json.Serialization.Metadata;assembly=System.Text.Json" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Web.Activities.Http.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web.Activities.Http</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Text.Json.Serialization.Metadata</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExtractionSavedSearchOrdes" sap:VirtualizedContainerService.HintSize="858,1406" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="out_auth_header" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="518,99" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="=================1. EXTRAER DATOS DE LA BÚSQUEDA GUARDADA DE NETSUITE=================" />
+    </Sequence>
+    <Sequence DisplayName="Preparar párametros para la solicitud" sap:VirtualizedContainerService.HintSize="518,485" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="' === OAuth 1.0a para NetSuite RESTlet (HMAC-SHA256) ===&#xD;&#xA;&#xD;&#xA;inConsumerKey = inConsumerKey.Trim()&#xD;&#xA;inConsumerSecret = inConsumerSecret.Trim()&#xD;&#xA;inToken = inToken.Trim()&#xD;&#xA;inTokenSecret = inTokenSecret.Trim()&#xD;&#xA;inRealm = inRealm.Trim()&#xD;&#xA;inUrl = inUrl.Trim()&#xD;&#xA;inMethod = inMethod.Trim().ToUpperInvariant()&#xD;&#xA;&#xD;&#xA;Dim epoch As New DateTime(1970,1,1,0,0,0, DateTimeKind.Utc)&#xD;&#xA;Dim ts As String = CLng((DateTime.UtcNow - epoch).TotalSeconds).ToString()&#xD;&#xA;Dim nonce As String = Guid.NewGuid().ToString(&quot;N&quot;)&#xD;&#xA;&#xD;&#xA;Dim enc As System.Func(Of String, String) =&#xD;&#xA;    Function(v As String)&#xD;&#xA;        Dim s = System.Uri.EscapeDataString(If(v, String.Empty))&#xD;&#xA;        ' RFC 3986 strict&#xD;&#xA;        s = s.Replace(&quot;!&quot;, &quot;%21&quot;).Replace(&quot;*&quot;, &quot;%2A&quot;).Replace(&quot;'&quot;, &quot;%27&quot;).Replace(&quot;(&quot;, &quot;%28&quot;).Replace(&quot;)&quot;, &quot;%29&quot;)&#xD;&#xA;        Return s&#xD;&#xA;    End Function&#xD;&#xA;&#xD;&#xA;' 1) Separar baseUrl y query params de inUrl&#xD;&#xA;Dim uri = New Uri(inUrl)&#xD;&#xA;Dim baseUrl As String = uri.GetLeftPart(UriPartial.Path)  ' SIN query&#xD;&#xA;Dim queryParams = New System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of String, String))()&#xD;&#xA;&#xD;&#xA;If Not String.IsNullOrEmpty(uri.Query) Then&#xD;&#xA;    Dim raw = uri.Query.TrimStart(&quot;?&quot;c).Split(&quot;&amp;&quot;c)&#xD;&#xA;    For Each pair In raw&#xD;&#xA;        If String.IsNullOrEmpty(pair) Then Continue For&#xD;&#xA;        Dim kv = pair.Split(New Char() {&quot;=&quot;c}, 2)&#xD;&#xA;        Dim k = Uri.UnescapeDataString(kv(0))&#xD;&#xA;        Dim v = If(kv.Length &gt; 1, Uri.UnescapeDataString(kv(1)), &quot;&quot;)&#xD;&#xA;        queryParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(k, v))&#xD;&#xA;    Next&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' 2) Parámetros OAuth (no incluir realm en la firma)&#xD;&#xA;Dim allParams = New System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of String, String))()&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_consumer_key&quot;, inConsumerKey))&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_nonce&quot;, nonce))&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_signature_method&quot;, &quot;HMAC-SHA256&quot;))&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_timestamp&quot;, ts))&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_token&quot;, inToken))&#xD;&#xA;allParams.Add(New System.Collections.Generic.KeyValuePair(Of String, String)(&quot;oauth_version&quot;, &quot;1.0&quot;))&#xD;&#xA;&#xD;&#xA;' 3) Incluir TODOS los query params (script, deploy, recordtype, etc.)&#xD;&#xA;allParams.AddRange(queryParams)&#xD;&#xA;&#xD;&#xA;' 4) Normalizar y ordenar (lexicográfico por key, luego value) -&gt; parameter string&#xD;&#xA;Dim ordered = allParams _&#xD;&#xA;    .OrderBy(Function(kv) kv.Key, StringComparer.Ordinal) _&#xD;&#xA;    .ThenBy(Function(kv) kv.Value, StringComparer.Ordinal) _&#xD;&#xA;    .ToList()&#xD;&#xA;&#xD;&#xA;Dim sb As New System.Text.StringBuilder()&#xD;&#xA;For i = 0 To ordered.Count - 1&#xD;&#xA;    If i &gt; 0 Then sb.Append(&quot;&amp;&quot;)&#xD;&#xA;    sb.Append(enc(ordered(i).Key)).Append(&quot;=&quot;).Append(enc(ordered(i).Value))&#xD;&#xA;Next&#xD;&#xA;Dim paramString As String = sb.ToString()&#xD;&#xA;&#xD;&#xA;' 5) Base string: METHOD &amp; baseUrl (sin query) &amp; parameter string (todo percent-encoded)&#xD;&#xA;Dim baseString As String = inMethod &amp; &quot;&amp;&quot; &amp; enc(baseUrl) &amp; &quot;&amp;&quot; &amp; enc(paramString)&#xD;&#xA;&#xD;&#xA;' 6) Firmar&#xD;&#xA;Dim signingKey As String = enc(inConsumerSecret) &amp; &quot;&amp;&quot; &amp; enc(inTokenSecret)&#xD;&#xA;Dim hmac = New System.Security.Cryptography.HMACSHA256(System.Text.Encoding.UTF8.GetBytes(signingKey))&#xD;&#xA;Dim signature As String = Convert.ToBase64String(hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(baseString)))&#xD;&#xA;&#xD;&#xA;' 7) Authorization header (realm no se firma)&#xD;&#xA;Dim ah As New System.Text.StringBuilder(&quot;OAuth &quot;)&#xD;&#xA;ah.Append(&quot;realm=&quot;&quot;&quot;).Append(inRealm).Append(&quot;&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_consumer_key=&quot;&quot;&quot;).Append(inConsumerKey).Append(&quot;&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_token=&quot;&quot;&quot;).Append(inToken).Append(&quot;&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_signature_method=&quot;&quot;HMAC-SHA256&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_timestamp=&quot;&quot;&quot;).Append(ts).Append(&quot;&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_nonce=&quot;&quot;&quot;).Append(nonce).Append(&quot;&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_version=&quot;&quot;1.0&quot;&quot;,&quot;)&#xD;&#xA;ah.Append(&quot;oauth_signature=&quot;&quot;&quot;).Append(enc(signature)).Append(&quot;&quot;&quot;&quot;)&#xD;&#xA;&#xD;&#xA;outAuthHeader = ah.ToString()&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="inConsumerKey">
+            <Literal x:TypeArguments="x:String">4ec445f6e0533bd1b8d68230ff69a888187a54505a55d8e76de1b225e9f088a1</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inConsumerSecret">
+            <Literal x:TypeArguments="x:String">2ee35b4363985e15811736f94d844081a78278fd4f405811cd3e26429a2ee532</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inToken">
+            <Literal x:TypeArguments="x:String">8ebeee71b1634a981cf7a384e7b075249cc4a19af4b9f1e23647bdefbe1617e3</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inTokenSecret">
+            <Literal x:TypeArguments="x:String">f55d2073ea349cbc68f186d13ac01b496f94f7e5cd0cde56138b6716e57fbced</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inRealm">
+            <Literal x:TypeArguments="x:String">5845631</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inUrl">
+            <Literal x:TypeArguments="x:String">https://5845631.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=1325&amp;deploy=1&amp;recordtype=RESTlet</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inMethod">
+            <Literal x:TypeArguments="x:String">POST</Literal>
+          </InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="outAuthHeader">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_auth_header" />
+          </InOutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;✅ Autorización: &quot;+ out_auth_header]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </WriteLine>
+      </Sequence>
+    </Sequence>
+    <Sequence DisplayName="Generar solicitud POST" sap:VirtualizedContainerService.HintSize="518,799" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="status_response_api" />
+        <Variable x:TypeArguments="x:String" Name="response_api" />
+        <Variable x:TypeArguments="stjsm:JsonPropertyInfoValues(x:String)" Name="body" />
+        <Variable x:TypeArguments="x:String" Name="json_body" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[json_body]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["{""searchID"": ""customsearch_sm_estado_orden""}"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[json_body]" BodyFormat="application/json" DisplayName="HTTP Request (legacy)" EnableSSLVerification="True" EndPoint="https://5845631.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=1325&amp;deploy=1&amp;recordtype=RESTlet" sap:VirtualizedContainerService.HintSize="484,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[response_api]" StatusCode="[status_response_api]" TimeoutMS="60000">
+        <ui:HttpClient.Attachments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Attachments>
+        <ui:HttpClient.Cookies>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Cookies>
+        <ui:HttpClient.Headers>
+          <InArgument x:TypeArguments="x:String" x:Key="Authorization">[out_auth_header]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+        </ui:HttpClient.Headers>
+        <ui:HttpClient.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Parameters>
+        <ui:HttpClient.UrlSegments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.UrlSegments>
+      </ui:HttpClient>
+      <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="484,500" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If Condition="[status_response_api = 401]" sap:VirtualizedContainerService.HintSize="450,304" sap2010:WorkflowViewState.IdRef="If_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If.Then>
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,67" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;🚫Estado Solicitud Búsqueda: &quot;+ status_response_api.ToString()]" />
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,67" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;✅Estado Solicitud Búsqueda: &quot;+ status_response_api.ToString]" />
+            </Sequence>
+          </If.Else>
+        </If>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Contenido: &quot; + response_api]" />
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>
