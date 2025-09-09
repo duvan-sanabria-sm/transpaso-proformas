@@ -1,0 +1,408 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PrepareSavedSearchResponse" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="datatable_proformas" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>PrepareSavedSearchResponse_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PrepareSavedSearchResponse" sap:VirtualizedContainerService.HintSize="1061,2180" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="result_datatable" />
+      <Variable x:TypeArguments="x:String" Name="out_datatable" />
+      <Variable x:TypeArguments="s:DateTime" Name="start_date" />
+      <Variable x:TypeArguments="s:DateTime" Name="end_date" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="620,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="=================2. GENERAR REPORTE DEL DIA DE PROFORMAS=================" />
+    </Sequence>
+    <Sequence DisplayName="Generar reporte del dia" sap:VirtualizedContainerService.HintSize="620,1709" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="validate_file" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="586,1617" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1507" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap:VirtualizedContainerService.HintSize="518,317" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:OutputDataTable DataTable="[datatable_proformas]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[out_datatable]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;📋Datos: &quot;  + out_datatable]" />
+              </Sequence>
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="518,1130" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,980" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:FileExistsX DisplayName="File Exists" Exists="[validate_file]" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;\\Srvservimeters\PROGRAMACION AREA TECNICA\PROGRAMACION RETIE\REVISION DE PROFORMAS YEIMY\Archivos PC\AT NetSuite\Reportes del Transpaso\Reporte Proforma &quot; &amp; Now.ToString(&quot;yyyy-MM-dd&quot;) &amp; &quot;.xlsx&quot;]" />
+                      <If Condition="[validate_file]" sap:VirtualizedContainerService.HintSize="450,755" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,311" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[&quot;\\Srvservimeters\PROGRAMACION AREA TECNICA\PROGRAMACION RETIE\REVISION DE PROFORMAS YEIMY\Archivos PC\AT NetSuite\Reportes del Transpaso\Reporte Proforma &quot; &amp; Now.ToString(&quot;yyyy-MM-dd&quot;) &amp; &quot;.xlsx&quot;]" />
+                            <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[datatable_proformas]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Hoja1" WorkbookPath="[&quot;\\Srvservimeters\PROGRAMACION AREA TECNICA\PROGRAMACION RETIE\REVISION DE PROFORMAS YEIMY\Archivos PC\AT NetSuite\Reportes del Transpaso\Reporte Proforma &quot; &amp; Now.ToString(&quot;yyyy-MM-dd&quot;) &amp; &quot;.xlsx&quot;]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[datatable_proformas]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="382,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Hoja1" WorkbookPath="[&quot;\\Srvservimeters\PROGRAMACION AREA TECNICA\PROGRAMACION RETIE\REVISION DE PROFORMAS YEIMY\Archivos PC\AT NetSuite\Reportes del Transpaso\Reporte Proforma &quot; &amp; Now.ToString(&quot;yyyy-MM-dd&quot;) &amp; &quot;.xlsx&quot;]" />
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,75" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="536,594" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,534" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[&quot;\\Srvservimeters\PROGRAMACION AREA TECNICA\PROGRAMACION RETIE\REVISION DE PROFORMAS YEIMY\Archivos PC\AT NetSuite\Reportes del Transpaso\Reporte Proforma &quot; &amp; Now.ToString(&quot;yyyy-MM-dd&quot;) &amp; &quot;.xlsx&quot;]">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,242" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Hoja1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[datatable_proformas]" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+              </ueab:ExcelProcessScopeX>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="620,84" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,650" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Validar fecha según el dia del mes" sap:VirtualizedContainerService.HintSize="484,590" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:DateTime" Name="conversion_fecha_fin_inspeccion" />
+              <Variable x:TypeArguments="s:DateTime" Name="actual_date" />
+              <Variable x:TypeArguments="x:String" Name="message" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:DateTime">[actual_date]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="If Now.Day &lt;= 7 Then&#xA;    ' 1) Primera semana: 1° del mes → día actual + 1 día (fin exclusivo)&#xA;    start_date = New DateTime(Now.Year, Now.Month, 1, 0, 0, 0)&#xA;    end_date   = Now.Date.AddDays(1)&#xA;    message    = &quot;Condición 1: Primera semana del mes.&quot;&#xA;&#xA;ElseIf Now.Day &lt; 15 Then&#xA;    ' 2) Del 1° del mes hasta el día actual (fin exclusivo = hoy 00:00)&#xA;    start_date = New DateTime(Now.Year, Now.Month, 1, 0, 0, 0)&#xA;    end_date   = Now.Date&#xA;    message    = &quot;Condición 2: Del primero al día actual.&quot;&#xA;&#xA;Else&#xA;    ' 3) Todo el mes → primer día del mes hasta primer día del mes siguiente (fin exclusivo)&#xA;    start_date = New DateTime(Now.Year, Now.Month, 1, 0, 0, 0)&#xA;    end_date   = start_date.AddMonths(1)&#xA;    message    = &quot;Condición 3: Todo el mes.&quot;&#xA;End If&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+              <ui:InvokeCode.Arguments>
+                <InOutArgument x:TypeArguments="s:DateTime" x:Key="start_date">[start_date]</InOutArgument>
+                <InOutArgument x:TypeArguments="s:DateTime" x:Key="end_date">[end_date]</InOutArgument>
+                <InArgument x:TypeArguments="s:DateTime" x:Key="actual_date">[actual_date]</InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="Message">[message]</InOutArgument>
+              </ui:InvokeCode.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeCode>
+            <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;┏━━━━━━━━━━ 📅 RANGO SELECCIONADO ━━━━━━━━━━┓&quot; &amp; vbCrLf &amp;&#xA;&quot;  Inicio : New DateTime(&quot; &amp; start_date.Year &amp; &quot;, &quot; &amp; start_date.Month &amp; &quot;, &quot; &amp; start_date.Day &amp; &quot;, &quot; &amp; start_date.Hour &amp; &quot;, &quot; &amp; start_date.Minute &amp; &quot;, &quot; &amp; start_date.Second &amp; &quot;)&quot; &amp; vbCrLf &amp;&#xA;&quot;  Fin(*) : New DateTime(&quot; &amp; end_date.Year   &amp; &quot;, &quot; &amp; end_date.Month   &amp; &quot;, &quot; &amp; end_date.Day   &amp; &quot;, &quot; &amp; end_date.Hour   &amp; &quot;, &quot; &amp; end_date.Minute   &amp; &quot;, &quot; &amp; end_date.Second   &amp; &quot;)  (exclusivo)&quot; &amp; vbCrLf &amp;&#xA;&quot;  Rango  : &quot; &amp; start_date.ToString(&quot;dd/MM/yyyy&quot;) &amp; &quot; → &quot; &amp; end_date.AddDays(-1).ToString(&quot;dd/MM/yyyy&quot;) &amp; &quot; (incl.)&quot; &amp; vbCrLf &amp;&#xA;&quot;  Nota   : &quot; &amp; message &amp; vbCrLf &amp;&#xA;&quot;┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </WriteLine>
+            </Sequence>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="620,84" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,331" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Convertir respuesta de JSON a tabla de datos" sap:VirtualizedContainerService.HintSize="450,271" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="njl:JObject" Name="array_body" />
+              <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
+              <Variable x:TypeArguments="s:DateTime" Name="fecha" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="' In : json_string As String, startDate As DateTime, endDate As DateTime&#xA;' Out: resultDt    As DataTable&#xA;&#xA;' ------------------ PARSEO DEL BODY ------------------&#xA;Dim token As Newtonsoft.Json.Linq.JToken = Newtonsoft.Json.Linq.JToken.Parse(json_string)&#xA;&#xA;' Extraer texto del campo &quot;message&quot; si viene como: { &quot;message&quot;: &quot;Contenido: {...}&quot; }&#xA;Dim messageText As String&#xA;If token.Type = Newtonsoft.Json.Linq.JTokenType.Object AndAlso token(&quot;message&quot;) IsNot Nothing Then&#xA;    messageText = token.Value(Of String)(&quot;message&quot;)&#xA;Else&#xA;    messageText = json_string&#xA;End If&#xA;&#xA;' Tomar solo el bloque {...} al final (después de &quot;Contenido:&quot;)&#xA;Dim innerJson As String&#xA;Dim m As System.Text.RegularExpressions.Match = System.Text.RegularExpressions.Regex.Match(messageText, &quot;\{.*\}\s*$&quot;, System.Text.RegularExpressions.RegexOptions.Singleline)&#xA;If m.Success Then&#xA;    innerJson = m.Value&#xA;Else&#xA;    innerJson = messageText&#xA;End If&#xA;&#xA;Dim innerObj As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.Linq.JObject.Parse(innerJson)&#xA;&#xA;' ------------------ ENCONTRAR EL ARRAY ------------------&#xA;Dim arr As Newtonsoft.Json.Linq.JArray = Nothing&#xA;Dim keys() As String = {&quot;results&quot;,&quot;value&quot;,&quot;items&quot;,&quot;data&quot;,&quot;records&quot;}&#xA;For Each k As String In keys&#xA;    Dim candidate As Newtonsoft.Json.Linq.JArray = TryCast(innerObj.SelectToken(k), Newtonsoft.Json.Linq.JArray)&#xA;    If candidate IsNot Nothing Then&#xA;        arr = candidate&#xA;        Exit For&#xA;    End If&#xA;Next&#xA;&#xA;If arr Is Nothing Then&#xA;    ' Fallback: primera propiedad que sea JArray&#xA;    For Each p As Newtonsoft.Json.Linq.JProperty In innerObj.Properties()&#xA;        Dim ja As Newtonsoft.Json.Linq.JArray = TryCast(p.Value, Newtonsoft.Json.Linq.JArray)&#xA;        If ja IsNot Nothing Then&#xA;            arr = ja&#xA;            Exit For&#xA;        End If&#xA;    Next&#xA;End If&#xA;&#xA;If arr Is Nothing Then&#xA;    ' Si no hay array en absoluto, tratar el objeto como una sola fila&#xA;    arr = New Newtonsoft.Json.Linq.JArray(innerObj)&#xA;End If&#xA;&#xA;' ------------------ JARRAY -&gt; DATATABLE ------------------&#xA;Dim dt As System.Data.DataTable&#xA;If arr IsNot Nothing AndAlso arr.Count &gt; 0 Then&#xA;    resultDt = Newtonsoft.Json.JsonConvert.DeserializeObject(Of System.Data.DataTable)(arr.ToString())&#xA;Else&#xA;    resultDt = New System.Data.DataTable()&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="json_string">[response_api]</InArgument>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="resultDt">[result_datatable]</InOutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="620,75" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="502,363" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Filtrar tabla de datos por fecha" sap:VirtualizedContainerService.HintSize="468,303" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataRow[]" Name="rows" />
+              <Variable x:TypeArguments="sd:DataTable" Name="filter_datatable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataRow[]">[rows]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataRow[]" xml:space="preserve">[result_datatable.Select(
+    "[FECHA DE INICIO DE LA INSPECCION] &gt;= '" &amp; start_date.ToString("yyyy-MM-dd") &amp; _
+    "' AND [FECHA FIN DE LA INSPECCION] &lt; '" &amp; end_date.ToString("yyyy-MM-dd") &amp; "'"
+)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[filter_datatable]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[If(rows IsNot Nothing AndAlso rows.Length &gt; 0, rows.CopyToDataTable(), result_datatable.Clone())]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

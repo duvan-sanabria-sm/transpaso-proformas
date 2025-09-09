@@ -1,0 +1,436 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SendProformaEmails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="total_data" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>SendProformaEmails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SendProformaEmails" sap:VirtualizedContainerService.HintSize="1031,1897" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Salida" sap:VirtualizedContainerService.HintSize="536,205" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="=================3. ENVIAR CORREO DE PROFORMAS=================" />
+    </Sequence>
+    <Sequence DisplayName="Entrada: Suma total de los proformas" sap:VirtualizedContainerService.HintSize="536,1669" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s:DateTime" Name="fecha_actual" />
+        <Variable x:TypeArguments="x:Double" Name="total_sum" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[total_data]" DisplayName="Recorrer: Cada item de la tabla de datos" sap:VirtualizedContainerService.HintSize="502,360" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="468,164" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Suma y conversión: Total de las proformas y se convierten a double" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Double">[total_sum]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Double">[total_sum + Convert.ToDouble(CurrentRow("Total"))]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <Sequence DisplayName="Envio de correo electrónico" sap:VirtualizedContainerService.HintSize="502,1226" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="resultado_total" />
+          <Variable x:TypeArguments="x:String" Name="cuerpo_html" />
+          <Variable x:TypeArguments="x:String" Name="user" />
+          <Variable x:TypeArguments="ss:SecureString" Name="password" />
+          <Variable x:TypeArguments="x:String" Name="email" />
+          <Variable x:TypeArguments="x:String" Name="converted_mail" />
+          <Variable x:TypeArguments="scg:List(x:String)" Name="email_list" />
+          <Variable x:TypeArguments="x:String" Name="tabla_html" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Credenciales Magda Rodríguez" CacheStrategy="None" DisplayName="Obtener: Credenciales de Outlook" FolderPath="Servimeters/Retie/Proformas" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:GetRobotCredential>
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Inicializar el mensaje HTML&#xA;Dim htmlMessage As String = &quot;&lt;p&gt;Buen Día&lt;/p&gt;&quot;&#xA;htmlMessage &amp;= &quot;&lt;p&gt;Adjunto la tabla del traspaso de proformas correspondiente al mes en curso. En este documento encontrará los detalles necesarios para su revisión.&lt;br&gt;&quot;&#xA;htmlMessage &amp;= &quot;Si tiene alguna pregunta o necesita más información, no dude en contactarme.&lt;/p&gt;&quot;&#xA;&#xA;' Inicializar la tabla HTML con encabezados&#xA;htmlTable = &quot;&lt;table border='1' cellpadding='5'&gt;&lt;thead&gt;&lt;tr&gt;&quot;&#xA;htmlTable &amp;= &quot;&lt;th&gt;OS_NS&lt;/th&gt;&lt;th&gt;Total&lt;/th&gt;&quot;&#xA;htmlTable &amp;= &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;&#xA;&#xA;' Recorrer cada fila de datos_total y mostrar solo las columnas os_ns y total&#xA;For Each row As DataRow In datos_total.Rows&#xA;    htmlTable &amp;= &quot;&lt;tr&gt;&quot;&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; row(&quot;os_ns&quot;).ToString() &amp; &quot;&lt;/td&gt;&quot;&#xA;    &#xA;    ' Convertir el valor a decimal con 2 decimales y comas para miles&#xA;    htmlTable &amp;= &quot;&lt;td&gt;&quot; &amp; Convert.ToDecimal(row(&quot;total&quot;)).ToString(&quot;N2&quot;) &amp; &quot;&lt;/td&gt;&quot;&#xA;    htmlTable &amp;= &quot;&lt;/tr&gt;&quot;&#xA;Next&#xA;&#xA;' Agregar la fila de suma total con formato decimal y separadores de miles&#xA;htmlTable &amp;= &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;&quot; &amp; suma_total.ToString(&quot;N2&quot;) &amp; &quot;&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&quot;&#xA;&#xA;' Cerrar la tabla HTML&#xA;htmlTable &amp;= &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;&#xA;&#xA;' Unir el mensaje HTML con la tabla&#xA;cuerpo_html = htmlMessage &amp; htmlTable&#xA;" DisplayName="Template HTML: generar tablas con sus datos" sap:VirtualizedContainerService.HintSize="434,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+          <ui:InvokeCode.Arguments>
+            <InArgument x:TypeArguments="sd:DataTable" x:Key="datos_total">
+              <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="total_data" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Double" x:Key="suma_total">
+              <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="total_sum" />
+            </InArgument>
+            <InOutArgument x:TypeArguments="x:String" x:Key="cuerpo_html">
+              <VisualBasicReference x:TypeArguments="x:String" ExpressionText="cuerpo_html" />
+            </InOutArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="htmlTable">
+              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="tabla_html" />
+            </InArgument>
+          </ui:InvokeCode.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeCode>
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="606,1482" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <umab:ExchangeApplicationCard Account="{x:Null}" ApplicationId="{x:Null}" EmailAddress="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" ConnectionAccountName="magda.rodriguez@servimeters.com #2" ConnectionId="4287f682-6053-40fb-a928-5c5518ef8177" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="572,1422" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="True">
+                <umab:ExchangeApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1175" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,562" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,451" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Transpaso de Proformas" To="victor.gutierrez@servimeters.com" UseDocumentAsBody="False">
+                              <umab:SendMailX.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </umab:SendMailX.Files>
+                              <umab:SendMailX.HtmlBodyFromFile>
+                                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent2.html">
+                                  <umabh:HtmlContentArgument.RuntimeImages>
+                                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                  </umabh:HtmlContentArgument.RuntimeImages>
+                                  <umabh:HtmlContentArgument.ValueMappings>
+                                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                      <umabh:HtmlTextValueMapping Name="Value" Value="[cuerpo_html]" />
+                                    </scg:List>
+                                  </umabh:HtmlContentArgument.ValueMappings>
+                                </umabh:HtmlContentArgument>
+                              </umab:SendMailX.HtmlBodyFromFile>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </umab:SendMailX>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,553" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,451" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Transpaso de Proformas" To="duvan.sanabria@servimeters.com" UseDocumentAsBody="False">
+                              <umab:SendMailX.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </umab:SendMailX.Files>
+                              <umab:SendMailX.HtmlBodyFromFile>
+                                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent2.html">
+                                  <umabh:HtmlContentArgument.RuntimeImages>
+                                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                  </umabh:HtmlContentArgument.RuntimeImages>
+                                  <umabh:HtmlContentArgument.ValueMappings>
+                                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                      <umabh:HtmlTextValueMapping Name="Value" Value="[cuerpo_html]" />
+                                    </scg:List>
+                                  </umabh:HtmlContentArgument.ValueMappings>
+                                </umabh:HtmlContentArgument>
+                              </umab:SendMailX.HtmlBodyFromFile>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </umab:SendMailX>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                    </Sequence>
+                  </ActivityAction>
+                </umab:ExchangeApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </umab:ExchangeApplicationCard>
+            </Sequence>
+          </ui:CommentOut.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:CommentOut>
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,499" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:SendMail ResourceAttachmentList="{x:Null}" AttachmentInputMode="Existing" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Body="[cuerpo_html]" Cc="magda.rodriguez@servimeters.com" ConnectionId="b9e509f3-fbe2-4993-a402-50413149017e" ContinueOnError="{x:Null}" DisplayName="Envió: Transpaso de proformas" Email="[user]" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="382,439" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="587" ReplyTo="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="[password]" Server="smtp-mail.outlook.com" Subject="Transpaso de Proformas" TimeoutMS="{x:Null}" To="duvan.sanabria@servimeters.com" UseISConnection="True" UseOAuth="{x:Null}">
+                <ui:SendMail.AttachmentsBackup>
+                  <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                    <usau:BackupSlot.BackupValues>
+                      <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                    </usau:BackupSlot.BackupValues>
+                  </usau:BackupSlot>
+                </ui:SendMail.AttachmentsBackup>
+                <ui:SendMail.ConnectionDetailsBackupSlot>
+                  <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+                    <usau:BackupSlot.BackupValues>
+                      <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                    </usau:BackupSlot.BackupValues>
+                  </usau:BackupSlot>
+                </ui:SendMail.ConnectionDetailsBackupSlot>
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendMail>
+            </Sequence>
+          </ui:CommentOut.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:CommentOut>
+        <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:List(x:String)">[email_list]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[New List(Of String) From {
+  "magda.rodriguez@servimeters.com",
+  "director.medellin@servimeters.com",
+  "maryluz.perez@servimeters.com",
+  "mauricio.martinez@servimeters.com",
+  "carlos.montoya@servimeters.com",
+  "sergio.lopez@servimeters.com",
+  "luis.martinez@servimeters.com",
+  "heidy.morar@servimeters.com"
+}]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[converted_mail]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[String.Join(";", email_list)]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Body="[cuerpo_html]" Cc="[converted_mail]" ConnectionId="57aa6e86-4bc9-498c-81e0-801fbe940f37" DisplayName="Envió: Transpaso de proformas" Email="[user]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,428" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[password]" Server="smtp-mail.outlook.com" Subject="Transpaso de Proformas" To="victor.gutierrez@servimeters.com" UseISConnection="True">
+          <ui:SendMail.AttachmentsBackup>
+            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ui:SendMail.AttachmentsBackup>
+          <ui:SendMail.ConnectionDetailsBackupSlot>
+            <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ui:SendMail.ConnectionDetailsBackupSlot>
+          <ui:SendMail.Files>
+            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+          </ui:SendMail.Files>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:SendMail>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

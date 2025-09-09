@@ -12,20 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "archivo_proformas&Sequence_777",
+        "json_body&Flowchart_2",
         "FechaInicio&Sequence_530",
         "FechaFin&Sequence_530",
         "ruta_revision_proformas&Flowchart_2",
         "datos_filtrados_proformas&Flowchart_2",
         "value_porcentaje_number&Flowchart_2",
-        "user&Sequence_14",
-        "password&Sequence_14",
-        "ruta_local_descargas&Sequence_635",
-        "variable1&Sequence_31",
-        "rutas_archivos_agenda&Sequence_636",
-        "variable1&Sequence_35",
-        "numero_filas_excel&Sequence_49",
-        "last_row&Sequence_49",
         "fecha_inicio_inspección&Sequence_67",
         "conversion_fecha_inicio_inspeccion&Sequence_67",
         "fecha_fin_inspección&Sequence_67",
@@ -60,7 +52,47 @@
         "converted_mail&Sequence_771",
         "email_list&Sequence_771"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "response_api"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/ExtractionSavedSearchOrders.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "json_body&Sequence_4",
+        "body&Sequence_4",
+        "status_response_api&Sequence_4",
+        "out_auth_header&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "response_api"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/PrepareSavedSearchResponse.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "end_date&Sequence_1",
+        "start_date&Sequence_1",
+        "out_datatable&Sequence_1",
+        "filter_datatable&Sequence_12",
+        "rows&Sequence_12",
+        "fecha&Sequence_2",
+        "message&Sequence_8",
+        "actual_date&Sequence_8",
+        "conversion_fecha_fin_inspeccion&Sequence_8",
+        "result_datatable&Sequence_1",
+        "datatable&Sequence_2",
+        "array_body&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "response_api"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
