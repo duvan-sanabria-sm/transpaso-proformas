@@ -1,0 +1,6 @@
+{
+  "Name": "tranpaso-proformas",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

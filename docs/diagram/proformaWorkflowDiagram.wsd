@@ -1,0 +1,63 @@
+@startuml
+title FLUJO GENERAL - TRASPASO DE PROFORMAS (VERSION PARA TODO PÚBLICO)
+
+start
+
+:'Iniciar proceso';
+
+:'Obtener la lista de proformas desde el sistema';
+note right
+  El robot recoge un reporte que contiene:
+  - Número de visitas realizadas
+  - Número de visitas programadas
+  - Fechas de ejecución
+  - Porcentaje de avance
+  - Valor del proyecto
+end note
+
+if (¿Hay proformas en el reporte?) then (Sí)
+
+  repeat
+    :'Tomar una proforma de la lista';
+
+    :'Revisar si la fecha de la proforma
+    pertenece al período que se debe analizar';
+    note right
+      El período depende del día del mes:
+      - Días 1–7: inicio del mes hasta mañana
+      - Días 8–14: inicio del mes hasta hoy
+      - Día 15 en adelante: todo el mes
+    end note
+
+    :'Calcular el avance del proyecto';
+    note right
+      Se analiza cuántas visitas se han realizado
+      vs cuántas estaban programadas.
+    end note
+
+    :'Determinar el estado del proyecto';
+    note right
+      El robot asigna uno de estos estados:
+      - PROYECTO FINALIZADO
+      - FINALIZADO POR DIRECTRIZ
+      - EN EJECUCIÓN
+    end note
+
+    :'Actualizar la proforma en el sistema
+    con el avance y el estado asignado';
+
+  repeat while (¿Quedan más proformas?) is (Sí)
+
+  :'Generar un resumen final de proformas';
+  :'Calcular el valor total de todas las proformas';
+  :'Enviar un mensaje con el listado de proformas
+    y el total acumulado';
+
+else (No)
+  :'Registrar que no se encontraron proformas válidas';
+endif
+
+:'Terminar proceso';
+stop
+
+@enduml

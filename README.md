@@ -1,5 +1,5 @@
-# 🤖 Documentación del Robot de Transpaso de Proformas
+# 🗂️ Documentación
 
-## 📑 Contenido
-- [🔧 Parámetros a tener en cuenta](docs/general_description.md)
-
+### 📘 Descripción del Robot
+Información general sobre qué hace el robot y su funcionamiento:
+- 🧩 **Condiciones y Filtros de Órdenes de Servicio**: [Acceder](docs/serviceOrderFilters)

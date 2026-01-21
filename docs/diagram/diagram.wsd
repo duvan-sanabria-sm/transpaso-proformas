@@ -1,0 +1,98 @@
+@startuml
+title PROFORMA PROCESSING WORKFLOW - FULL SEQUENCE DIAGRAM
+
+actor Usuario
+participant "Main.xaml" as Main
+participant "ExtractionSavedSearchOrders.xaml" as Extract
+participant "PrepareSavedSearchResponse.xaml" as Prepare
+participant "UpdateProformaStatusByConditions.xaml" as UpdateStatus
+participant "SendProformaEmails.xaml" as SendMail
+
+
+Usuario -> Main: Ejecutar Robot
+
+== 1. Extracción de Proformas ==
+Main -> Extract: Invoke Workflow\n(HTTP POST → obtener proformas)
+Extract --> Main: datatable_proformas
+
+note right of Extract
+  - Realiza solicitud HTTP POST
+  - Recupera registros de proformas
+  - Convierte la respuesta a DataTable
+end note
+
+
+== 2. Generación del Reporte ==
+Main -> Prepare: Invoke Workflow\n(input: datatable_proformas)
+Prepare --> Main: reporte_generado
+
+note right of Prepare
+  - Toma la tabla de proformas recibida
+  - Acomoda columnas y limpia datos
+  - Crea archivo Excel en:
+    \\Srvservimeters\...\Reportes del Traspaso
+end note
+
+
+== 3. Procesamiento del Estado ==
+Main -> UpdateStatus: Invoke Workflow\n(input: datatable_proformas)
+UpdateStatus --> Main: proformas_actualizadas
+
+group Recorrer todas las proformas
+  Main -> UpdateStatus: For each row\n(CurrentRow)
+
+  == Conversión de datos ==
+  UpdateStatus -> UpdateStatus: Convertir programado, realizado,\nporcentaje y valor
+  note right
+    Usa Invoke Code para:
+    - Convertir valores con CultureInfo
+    - Quitar "%" al porcentaje
+    - Redondear valores con Math.Round
+    - Convertir moneda a decimal
+  end note
+
+  == Lógica del estado ==
+  alt programado > 0 AND realizado >= programado
+    UpdateStatus -> UpdateStatus: estado = 1\n"Proyecto Finalizado"
+  else porcentaje >= 65
+    UpdateStatus -> UpdateStatus: estado = 2\n"Directriz (>=65%)"
+  else programado = 2 AND realizado = 1
+    UpdateStatus -> UpdateStatus: estado = 2\n"Directriz (1 de 2)"
+  else valor < 5MM AND realizado >= 1
+    UpdateStatus -> UpdateStatus: estado = 2\n"Directriz (<5MM)"
+  else
+    UpdateStatus -> UpdateStatus: estado = 0\n"En Ejecución"
+  end alt
+
+  == Actualizar Proforma en NetSuite ==
+  UpdateStatus -> UpdateStatus: Preparar parámetros de API\n(ID, porcentaje, estado)
+  UpdateStatus -> UpdateStatus: HTTP PATCH (actualizar proforma)
+  alt Error (401, 500…)
+    UpdateStatus -> UpdateStatus: Terminate Workflow\n"La solicitud no fue procesada"
+  end alt
+
+  == Agregar al consolidado ==
+  UpdateStatus -> UpdateStatus: Añadir registro a total_data
+end group
+
+
+== 4. Envío de Notificación ==
+Main -> SendMail: Invoke Workflow\n(input: proformas_actualizadas)
+SendMail --> Main: estado_envio
+
+note right of SendMail
+  - Agrupa proformas finalizadas
+  - Calcula total general del valor
+  - Envía correo con:
+    * Proforma
+    * Estado
+    * Valor individual
+    * Total acumulado
+end note
+
+
+== 5. Finalización ==
+Main -> Main: Registrar logs\ny limpiar recursos
+Main --> Usuario: Proceso completado
+
+@enduml

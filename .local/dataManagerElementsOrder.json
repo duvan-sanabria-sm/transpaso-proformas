@@ -11,49 +11,10 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "json_body&Flowchart_2",
-        "FechaInicio&Sequence_530",
-        "FechaFin&Sequence_530",
-        "ruta_revision_proformas&Flowchart_2",
-        "datos_filtrados_proformas&Flowchart_2",
-        "value_porcentaje_number&Flowchart_2",
-        "fecha_inicio_inspección&Sequence_67",
-        "conversion_fecha_inicio_inspeccion&Sequence_67",
-        "fecha_fin_inspección&Sequence_67",
-        "conversion_fecha_fin_inspeccion&Sequence_283",
-        "fecha_actual&Sequence_283",
-        "Message&Sequence_283",
-        "numero_filas_visitas_ejecutadas&Sequence_681",
-        "last_row_visitas&Sequence_681",
-        "datos_transpaso_proformas&Sequence_681",
-        "total&Sequence_681",
-        "datos_proformas&Sequence_73",
-        "datos_total&Sequence_73",
-        "suma_total&Sequence_73",
-        "tabla_html&Sequence_73",
-        "variable1&Sequence_73",
-        "limit&Sequence_72",
-        "value_OS_NS&Sequence_94",
-        "value_porcentaje&Sequence_94",
-        "value_realizado&Sequence_94",
-        "value_programado&Sequence_94",
-        "total_array&Sequence_94",
-        "estado&Sequence_97",
-        "numero_visitas&Sequence_535",
-        "visitas_ejecutadas&Sequence_535",
-        "conversion_visitas_ejecutadas&Sequence_535",
-        "fecha_actual&Sequence_770",
-        "resultado_total&Sequence_771",
-        "cuerpo_html&Sequence_771",
-        "user&Sequence_771",
-        "password&Sequence_771",
-        "email&Sequence_771",
-        "converted_mail&Sequence_771",
-        "email_list&Sequence_771"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "response_api"
+        "datatable_proformas",
+        "total_data"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -61,14 +22,9 @@
     {
       "Path": "workflows/ExtractionSavedSearchOrders.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "json_body&Sequence_4",
-        "body&Sequence_4",
-        "status_response_api&Sequence_4",
-        "out_auth_header&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "response_api"
+        "datatable_proformas"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -76,22 +32,30 @@
     {
       "Path": "workflows/PrepareSavedSearchResponse.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "end_date&Sequence_1",
-        "start_date&Sequence_1",
-        "out_datatable&Sequence_1",
-        "filter_datatable&Sequence_12",
-        "rows&Sequence_12",
-        "fecha&Sequence_2",
-        "message&Sequence_8",
-        "actual_date&Sequence_8",
-        "conversion_fecha_fin_inspeccion&Sequence_8",
-        "result_datatable&Sequence_1",
-        "datatable&Sequence_2",
-        "array_body&Sequence_2"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "response_api"
+        "datatable_proformas"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/UpdateProformaStatusByConditions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "datatable_proformas",
+        "total_data"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/SendProformaEmails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "total_data"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
