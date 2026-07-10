@@ -115,9 +115,13 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendProformaEmails" sap:VirtualizedContainerService.HintSize="1030,2090" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendProformaEmails" sap:VirtualizedContainerService.HintSize="1088,2248" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,7 +136,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="=================3. ENVIAR CORREO DE PROFORMAS=================" />
     </Sequence>
-    <Sequence DisplayName="Entrada: Suma total de los proformas" sap:VirtualizedContainerService.HintSize="486,1861" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Entrada: Suma total de los proformas" sap:VirtualizedContainerService.HintSize="486,2019" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:DateTime" Name="fecha_actual" />
         <Variable x:TypeArguments="x:Double" Name="total_sum" />
@@ -143,20 +147,20 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[total_data]" DisplayName="Recorrer: Cada item de la tabla de datos" sap:VirtualizedContainerService.HintSize="452,416" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[total_data]" DisplayName="Recorrer: Cada item de la tabla de datos" sap:VirtualizedContainerService.HintSize="452,408" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Suma y conversión: Total de las proformas y se convierten a double" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Suma y conversión: Total de las proformas y se convierten a double" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[total_sum]</OutArgument>
                 </Assign.To>
@@ -180,7 +184,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <Sequence DisplayName="Envio de correo electrónico" sap:VirtualizedContainerService.HintSize="452,1362" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <Sequence DisplayName="Envio de correo electrónico" sap:VirtualizedContainerService.HintSize="452,1528" sap2010:WorkflowViewState.IdRef="Sequence_12">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="resultado_total" />
           <Variable x:TypeArguments="x:String" Name="cuerpo_html" />
@@ -190,6 +194,7 @@
           <Variable x:TypeArguments="x:String" Name="converted_mail" />
           <Variable x:TypeArguments="scg:List(x:String)" Name="email_list" />
           <Variable x:TypeArguments="x:String" Name="tabla_html" />
+          <Variable x:TypeArguments="x:String" Name="emailNotification" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -197,7 +202,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Credenciales Magda Rodríguez" CacheStrategy="None" DisplayName="Obtener: Credenciales de Outlook" FolderPath="Servimeters/Retie/Proformas" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]">
+        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Credenciales Magda Rodríguez" CacheStrategy="None" DisplayName="Obtener: Credenciales de Outlook" FolderPath="Servimeters/Retie/Proformas" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -219,34 +224,34 @@
         </ui:InvokeCode>
         <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
           <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="606,1482" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="606,1491" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:ExchangeApplicationCard Account="{x:Null}" ApplicationId="{x:Null}" EmailAddress="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" ConnectionAccountName="magda.rodriguez@servimeters.com #2" ConnectionId="4287f682-6053-40fb-a928-5c5518ef8177" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="572,1422" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="True">
+              <umab:ExchangeApplicationCard Account="{x:Null}" ApplicationId="{x:Null}" EmailAddress="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" ConnectionAccountName="magda.rodriguez@servimeters.com #2" ConnectionId="4287f682-6053-40fb-a928-5c5518ef8177" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="572,1431" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="True">
                 <umab:ExchangeApplicationCard.Body>
                   <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1175" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1179" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,562" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,566" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,451" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,455" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Transpaso de Proformas" To="victor.gutierrez@servimeters.com" UseDocumentAsBody="False">
+                            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,395" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Transpaso de Proformas" To="victor.gutierrez@servimeters.com" UseDocumentAsBody="False">
                               <umab:SendMailX.Files>
                                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                               </umab:SendMailX.Files>
@@ -363,28 +368,18 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:CommentOut>
-        <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="correosNotificación" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Servimeters/Retie/Proformas" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+          <ui:GetRobotAsset.Value>
+            <OutArgument x:TypeArguments="x:String">[emailNotification]</OutArgument>
+          </ui:GetRobotAsset.Value>
+        </ui:GetRobotAsset>
+        <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
             <OutArgument x:TypeArguments="scg:List(x:String)">[email_list]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[New List(Of String) From {
-  "magda.rodriguez@servimeters.com",
-  "director.medellin@servimeters.com",
-  "maryluz.perez@servimeters.com",
-  "mauricio.martinez@servimeters.com",
-  "carlos.montoya@servimeters.com",
-  "sergio.lopez@servimeters.com",
-  "luis.martinez@servimeters.com",
-  "heidy.morar@servimeters.com",
-  "duvan.sanabria@servimeters.com"
-}]</InArgument>
+            <InArgument x:TypeArguments="scg:List(x:String)">[EmailNotification.Split(";"c).Select(Function(x) x.Trim).Where(Function(x) x &lt;&gt; "").ToList()]</InArgument>
           </Assign.Value>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
         </Assign>
         <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
           <Assign.To>

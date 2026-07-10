@@ -23675,9 +23675,9 @@
     "restore": {
       "projectUniqueName": "tranpaso-proformas",
       "projectName": "tranpaso-proformas",
-      "projectPath": "C:\\Users\\duvan.sanabria\\OneDrive - Servimeters\\Documentos\\Robotización\\UiPath\\robot_transpaso-proformas\\.local",
+      "projectPath": "C:\\Users\\duvan.sanabria\\Documents\\Tablero Personal 2026\\10 🤖 Automatizaciones y Software\\Proyectos Ejecutables\\UiPath\\robot_transpaso-proformas\\.local",
       "packagesPath": "C:\\Users\\duvan.sanabria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\duvan.sanabria\\OneDrive - Servimeters\\Documentos\\Robotización\\UiPath\\robot_transpaso-proformas\\.local",
+      "outputPath": "C:\\Users\\duvan.sanabria\\Documents\\Tablero Personal 2026\\10 🤖 Automatizaciones y Software\\Proyectos Ejecutables\\UiPath\\robot_transpaso-proformas\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -23722,7 +23722,7 @@
             "version": "[2.1.0-preview, 2.1.0-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\duvan.sanabria\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\duvan.sanabria\\AppData\\Local\\Programs\\UiPathPlatform\\Studio\\26.0.197-cloud.24027\\SolutionPackager\\Tools\\WorkflowCompiler\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
